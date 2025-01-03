@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from www.d3bg.org/run-counter/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 10:53:32 GMT -->
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Diablo Bulgaria, Варварин, Знахар, Магьосник, Демон Хънтър, Монах, diablo III, diablo 4, diablo iv, друид, druid, фен сайт, гейминг, blizzard entertainment" />
+<meta name="description" content="Най-големият български фен сайт на Диабло игрите. Тук ще намерите всичко за diablo игрите както и много допълнителни материали и инструменти, които ще направят вашата игра по интересна." />
+<title>Брояч на рънове</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/style48d9.css?v3.9" type="text/css" />
+<body>
+	<style type="text/css">
+		
+		body { 
+			font-family: diablo; padding: 0px; margin: 0px; background: #000  center top no-repeat; 
+			background-image: url(bg.jpg); 
+			background-size: cover;
+		}
+		a { color: #B26400; text-decoration: none; }
+		a:hover { color: #B39E79; text-decoration: none; }
+		a:active { outline: none; }
+		.d2_color_text {
+			font-family: diablo;
+			background: #744c1f ;
+			background: -webkit-linear-gradient(to top, #744c1f  0%, #fff5de 100%);
+			background: -moz-linear-gradient(to top, #744c1f  0%, #fff5de 100%);
+			background: linear-gradient(to top, #744c1f  0%, #fff5de 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-shadow: none;
+		}
+		* {
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			-khtml-user-select: none; /* Konqueror HTML */
+			-moz-user-select: none; /* Old versions of Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+				user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */					  
+			-webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+			-webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+			outline: none !important;
+		}
+		@media only screen and (max-width: 600px) {
+			body {
+				background-size: 305%;
+				background-position-y: -100px;
+			}
+		}
+		.diablo-button-nav {
+			width: 182px;
+			height: 56px;
+			background-image: url(btn.jpg);
+			border: 0;
+			padding: 10px;
+			font-size: 1em;
+			box-shadow: 0 0 33px 0 rgb(0 0 0 / 70%);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			cursor: pointer;
+		}
+		.diablo-button-nav:hover {
+			background-position: 100% calc(100% / 3);
+		}
+		.diablo-button-nav:active {
+			background-position: 100% calc(100% / 3 * 2);
+			font-size: 0.95em;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var sec = 0;
+			var localStorage_runs = localStorage.getItem('runs_sofar');
+			if (!localStorage_runs || isNaN(localStorage_runs)) { console.log('asd'); localStorage_runs = 0; }
+			
+			$(".runs_sofar").html(localStorage_runs);
+			
+			$(".add_to_counter").click(function(){
+				sec = 0;
+				localStorage.setItem("runs_sofar", parseInt(localStorage_runs) + 1);
+				localStorage_runs = localStorage.getItem('runs_sofar');
+				$(".runs_sofar").html(localStorage_runs);
+			});
+			
+			$(".cunter_clear").click(function(){
+				if(!confirm("Сигурен ли си?")){
+					return false;
+				}
+				sec = 0;
+				localStorage.setItem("runs_sofar", 0);
+				localStorage_runs = localStorage.getItem('runs_sofar');
+				$(".runs_sofar").html(localStorage_runs);
+			});
+			
+			function pad ( val ) { return val > 9 ? val : "0" + val; }
+			setInterval( function(){
+				$("#seconds").html(pad(++sec%60));
+				$("#minutes").html(pad(parseInt(sec/60,10)));
+			}, 1000);
+		});
+	</script>
+	<div style="width: 100%; margin: 0 auto;">
+		<div style="text-align: center; position: absolute; margin: 0px 0 0 0; color: #c2c2c2; font-size: 25px; width: 100%; font-weight: 600; text-shadow: 10px 5px 20px #000;">
+			
+			<a href="../index-2.html"><img src="../img/logo_d4bg.png" style="height: 300px; margin: -60px 0 -30px 0;" /></a><br />
+			<div style="font-size:40px;font-weight: 600;" class="d2_color_text"><span style="font-size: 55px;">Б</span>рояч на рънове</div> <br />
+			
+	
+			<span class="d2_color_text">Рънове до момента:</span>
+			<div class="runs_sofar d2_color_text" style="font-size:85px;font-weight: 100; margin: 20px 5px;">0</div>
+		
+			
+			<button class="diablo-button-nav add_to_counter"><span class="btn-d4-text d2_color_text">+1</span></button>
+			
+			<div style="font-size:16px; margin: 10px 30px;" class="d2_color_text"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+			
+			
+			<a class="cunter_clear" style="font-size:14px;">Занули</a>
+		</div>
+	</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8fbda1b788fed0e6',t:'MTczNTg1MTEzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../cdn-cgi/challenge-platform/h/b/scripts/jsd/787bc399e22f/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<!-- Mirrored from www.d3bg.org/run-counter/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 10:53:32 GMT -->
+</html>

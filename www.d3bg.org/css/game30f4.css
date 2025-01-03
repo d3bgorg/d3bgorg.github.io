@@ -1,0 +1,1359 @@
+.systems_preview_box { background: url(../img/sprites/systems_sprite_60.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.characters_preview_box { background: url(../img/sprites/characters_sprite_60.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.quests_preview_box { background: url(../img/sprites/quests_sprite_60.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.items_preview_box { background: url(../img/sprites/items_sprite_60.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.zones_preview_box { background: url(../img/sprites/zones_sprite_60.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.events_preview_box { background: url(../img/sprites/events_sprite_60.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.monsters_preview_box { background: url(../img/sprites/monsters_sprite_60.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.artisans_preview_box { background: url(../img/sprites/artisans_sprite_60_backup.jpg) no-repeat; margin: 0 0 10px 25px;} 
+.followers_preview_box { background: url(../img/sprites/followers_sprite_60_backup.jpg) no-repeat; margin: 0 0 10px 25px;} 
+
+
+.preview_box {display:block;width: 246px; height: 193px; color: #b39e79;}
+.preview_box:hover {background-position: 0px -193px;}
+.preview_box .box_bullet  {display: block;float: right; background: url(../img/bullet.png)no-repeat; width: 11px; height: 11px; margin: 15px 10px 0 15px;}
+.box_hover {background-position: 0px -193px;}
+.box_title {float: right;display:block; outline: none; margin: 10px -8px 0 -5px; font-size: 16px;font-weight: bold; color: #D6D1C4;}
+.box_title:hover {text-decoration:underline;}
+.box_preview_links {display: block;float: right;text-align: right; color: #e5deca;font-style: italic;margin: -160px -5px 0 0px;}
+
+.box_link {display:block;height: 25px;}
+
+
+
+/*.char_preview_container:hover {cursor: pointer;}*/
+.small_box_preview_shadow {width: 246px; height: 15px; background: url(../img/sprites/small_box_shadow.png) no-repeat; margin: -16px 0 10px 25px;}
+
+
+#button_d2r, #system_button, #d2_button, #characters_button, #monsters_button, #quests_button, #items_button,#zones_button,#artisans_button,#followers_button,#world_map_button {float: left;display:block;text-indent: -9999px; outline: none; margin: 0px 0 0 -12px;height: 58px; width: 203px; position: relative;z-index:9;}
+
+
+#system_button:link,#novini_button:visited {background: url(../img/thegame/system_button_backup.png) no-repeat 0px 0px;}
+#system_button:hover {background: url(../img/thegame/system_button_backup.png) no-repeat 0px -60px;}
+#system_button:active {background: url(../img/thegame/system_button_backup.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#button_d2r:link,#novini_button:visited {background: url(../diablo2/button_resurrected.png) no-repeat 0px 0px;}
+#button_d2r:hover {background: url(../diablo2/button_resurrected.png) no-repeat 0px -63px;}
+#button_d2r:active {background: url(../diablo2/button_resurrected.png) no-repeat 0px -125px;}/*-1px заради push effect*/
+
+#d2_button {margin: -15px 0 0px -12px;}
+#d2_button:link,#novini_button:visited {background: url(../img/thegame/d2_button.png) no-repeat 0px 0px;}
+#d2_button:hover {background: url(../img/thegame/d2_button.png) no-repeat 0px -60px;}
+#d2_button:active {background: url(../img/thegame/d2_button.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#characters_button:link,#characters_button:visited {background: url(../img/thegame/characters_button.png) no-repeat 0px 0px;}
+#characters_button:hover {background: url(../img/thegame/characters_button.png) no-repeat 0px -60px;}
+#characters_button:active {background: url(../img/thegame/characters_button.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#characters_button:link,#characters_button:visited {background: url(../img/thegame/characters_button.png) no-repeat 0px 0px;}
+#characters_button:hover {background: url(../img/thegame/characters_button.png) no-repeat 0px -60px;}
+#characters_button:active {background: url(../img/thegame/characters_button.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#monsters_button:link,#monsters_button:visited {background: url(../img/thegame/monsters_button.png) no-repeat 0px 0px;}
+#monsters_button:hover {background: url(../img/thegame/monsters_button.png) no-repeat 0px -60px;}
+#monsters_button:active {background: url(../img/thegame/monsters_button.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#quests_button:link,#quests_button:visited {background: url(../img/thegame/quests_button_backup.png) no-repeat 0px 0px;}
+#quests_button:hover {background: url(../img/thegame/quests_button_backup.png) no-repeat 0px -60px;}
+#quests_button:active {background: url(../img/thegame/quests_button_backup.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#items_button:link,#items_button:visited {background: url(../img/thegame/items_button_backup.png) no-repeat 0px 0px;}
+#items_button:hover {background: url(../img/thegame/items_button_backup.png) no-repeat 0px -60px;}
+#items_button:active {background: url(../img/thegame/items_button_backup.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#zones_button:link,#zones_button:visited {background: url(../img/thegame/zones_button.png) no-repeat 0px 0px;}
+#zones_button:hover {background: url(../img/thegame/zones_button.png) no-repeat 0px -60px;}
+#zones_button:active {background: url(../img/thegame/zones_button.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#artisans_button:link,#artisans_button:visited {background: url(../img/thegame/artisans_button_backup.png) no-repeat 0px 0px;}
+#artisans_button:hover {background: url(../img/thegame/artisans_button_backup.png) no-repeat 0px -60px;}
+#artisans_button:active {background: url(../img/thegame/artisans_button_backup.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+#followers_button:link,#followers_button:visited {background: url(../img/thegame/followers_button_backup.png) no-repeat 0px 0px;}
+#followers_button:hover {background: url(../img/thegame/followers_button_backup.png) no-repeat 0px -60px;}
+#followers_button:active {background: url(../img/thegame/followers_button_backup.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+
+#world_map_button:link,#world_map_button:visited {background: url(../diablo4/img/world_map_button.png) no-repeat 0px 0px;}
+#world_map_button:hover {background: url(../diablo4/img/world_map_button.png) no-repeat 0px -60px;}
+#world_map_button:active {background: url(../diablo4/img/world_map_button.png) no-repeat 0px -119px;}/*-1px заради push effect*/
+
+
+.game_boxes_column {width: 265px;float: left; margin-top: 30px;}
+
+/*SKILLS*/
+.pane {margin: 0 auto;position:relative;top:-20px;}
+.ajax_char_buttons {display: block;float: left; background: url(../img/thegame/ajax_buttons.jpg)no-repeat;height: 69px; margin: 0px 0px 0 0px;text-indent: -9999px;outline: none;}
+#char_overview_b {width: 133px;}
+#char_overview_b:hover {width: 133px;background-position: 0px -69px;}
+.char_overview_b_active {width: 133px;background-position: 0px -69px !important;}
+#char_skills_b {width: 137px;background-position: -133px 0px;}
+#char_skills_b:hover {background-position: -133px -69px;}
+.char_skills_b_active {background-position: -133px -69px !important;}
+#char_guides_b {width: 135px;background-position: -270px 0px;}
+#char_guides_b:hover {background-position: -270px -69px;}
+.char_guides_b_active {background-position: -270px -69px !important;}
+#char_forum_b {width: 134px;background-position: -405px 0px;}
+#char_forum_b:hover {background-position: -405px -69px;}
+.char_forum_b_active {background-position: -405px -69px !important;}
+
+.skill_box {width: 500px;height: auto;margin: 0 auto;}
+.skill_box:hover {box-shadow: inset 0 0 0 1px #342518;}
+ .odd {background-color: rgba(0, 0, 0, 0.22)}
+ .even {background-color: rgba(0, 0, 0, 0.44)}
+ .skill_icon_box {width: 65px;float:left;margin: 15px;}
+ .skill_level {display:block;text-align: center;margin-bottom:5px;color: #847b6f;}
+ .skill_category {color:#AD835A;}
+ .skill_digit {color:#8bd442;}
+ 
+ .skill_main_info {margin: 15px 0 0 0px;}
+ .skill_name {font-size: 18px;margin: 0 0 5px 0px;}
+ 
+ .skill_description {float: left;width: 310px;margin: -5px 0 0 15px;}
+ .skill_box_right {float: right;width: 144px;margin: 15px 15px 0 0px;}
+ .skill_video_preview_frame {display:block;width: 146px;height: 111px;background: url(../img/thegame/skills/skill_video_frame.png)no-repeat;position:relative;top:-109px;left:-7px;float:left;margin: 0 0 -105px 0px;}
+ .flowplayer_frame {position:relative;left:-18px;top:160px;background: url(../img/thegame/video_frame.jpg)no-repeat;padding: 10px;box-shadow: 0 0 20px #000;-moz-box-shadow: 0 0 20px #000;-webkit-box-shadow: 0 0 20px #000;}
+ .skill_rune_icon {display:block;width: 22px;height: 16px;background: url(../img/thegame/skill_runes_sprite_wide.png)no-repeat;float:left;text-indent: -9999px;margin: 5px 0 0 0px;}
+ .norune {background-position: -8px 0px;}
+ .rune_img_1 {background-position: -28px 0px;}
+ .rune_img_2 {background-position: -47px 0px;}
+ .rune_img_3 {background-position: -67px 0px;}
+ .rune_img_4 {background-position: -88px 0px;}
+ .rune_img_5 {background-position: -108px 0px;}
+ .skill_box_left {float: left;}
+ 
+ .skill_rune_tooltip {width: 300px;background: #1b1714;display:none;box-shadow: 0 0 20px #000;-moz-box-shadow: 0 0 20px #000;-webkit-box-shadow: 0 0 20px #000;padding: 10px; position: relative; z-index: 200;border: 2px solid #3e3629;}
+ .skill_rune_tooltip h3 {color: #b26400;  text-decoration: none; text-shadow:1px 1px 0px #000;text-align: center;margin: 5px 0 15px 0px;}
+ .skill_rune_image_box {width: 50px;float:left;margin: -8px 7px 0 0px;}
+ .skill_rune_image {margin: 20px auto;width: 40px;height: 40px;background: url(../img/thegame/skills/skill_runes_images.png)no-repeat;}
+ .skill_rune_description {margin: 15px 0 10px 0px;float:left;width: 240px;}
+ .srune_img_norune {background-position: -210px 0px;}
+ .srune_img_1 {background-position: 0px 0px;}
+ .srune_img_2 {background-position: -42px 0px;}
+ .srune_img_3 {background-position: -85px 0px;}
+ .srune_img_4 {background-position: -128px 0px;}
+ .srune_img_5 {background-position: -168px 0px;}
+ 
+ .passive_skill_frame {width: 81px;height: 81px;background: url(../img/thegame/skills/passive_frame.png)no-repeat;margin: -76px 0 0 -4px;}
+ .hovered {background-position: 0px -81px;}
+ 
+/*SKILLS END*/
+
+
+/*CHARACTER PAGES*/
+#dh_bg {width: 538px; height: 612px; background: url(../img/thegame/demon_page/dh_bg.jpg)no-repeat; margin: -8px 0 0 11px;padding: 13px 0 0 0px;}
+#wiz_bg {width: 538px; height: 612px; background: url(../img/thegame/wiz_page/wiz_bg.jpg)no-repeat; margin: -8px 0 0 11px;padding: 13px 0 0 0px;}
+#wd_bg {width: 538px; height: 612px; background: url(../img/thegame/witch_page/wd_bg_75.jpg)no-repeat; margin: -8px 0 0 11px;padding: 13px 0 0 0px;}
+#monk_bg {width: 538px; height: 612px; background: url(../img/thegame/monk_page/monk_bg_70.jpg)no-repeat; margin: -8px 0 0 11px;padding: 13px 0 0 0px;}
+/*CHARACTER PAGES END*/
+
+
+
+/*OVER VIEW CSS*/
+
+/* WITCH DOCTOR BEGIN */
+#wd_overview_bg {
+    background: url(../img/overview/wd/wd_overview_bg.png) no-repeat;
+    height: 283px;
+    margin: 0 0 0 318px;
+}
+#wd_overview_title {
+    background: url(../img/overview/titles/overview_title.png) no-repeat;
+    height: 31px;
+    margin: -260px 0 0 25px;
+
+}
+#wd_overview {
+    
+   margin: 15px 0 0 27px;
+   width: 470px;
+}
+#wd_overview .wd_paragraph1 {
+    
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    text-align: left;
+    
+}
+
+#wd_skills_title {
+    background: url(../img/overview/titles/skills_title.png) no-repeat;
+    height: 29px;
+    margin: -110px 0 0 290px;
+}
+#wd_circle1  {
+    background: url(../img/overview/wd/wd_circle1.png) no-repeat;
+    height: 64px;
+    margin: 20px 0 0 350px;
+
+}
+.wd_zaglavie {
+    
+    font-family: Georgia,times,serif;
+    font-size: 18px;
+    color: #b26400;
+
+}.wd_skill_11 {
+    width: 95px;
+    margin: 5px 0 0 430px
+
+}
+.wd_skill_1 {
+    width: 167px;
+    margin: 0 0 0 350px;
+    
+
+}
+#wd_circle2 {
+    background: url(../img/overview/wd/wd_circle2.png) no-repeat;
+    height: 64px;
+    margin: -15px 0 0 450px;
+
+}
+p.wd_skill_2 {
+    width: 159px;
+    margin: 0 0 0 366px;
+
+   
+}
+p.wd_paragraph2 {
+    width: 74px;
+    float: right;
+    margin: -45px 120px 0 0;
+
+}
+#wd_circle3 {
+    background: url(../img/overview/wd/wd_circle3.png) no-repeat;
+    height: 64px;
+    margin: 40px 0 0 365px;
+}
+p.wd_paragraph3 {
+    width: 101px;
+    float: right;
+    margin: 5px 22px 0 0 ;
+
+}
+p.wd_skill_3 {
+    width: 172px;
+    margin: 58px 0 0 365px;
+}
+#wd_circle4 {
+    background: url(../img/overview/wd/wd_circle4.png) no-repeat;
+    height: 64px;
+    margin: 50px 0 0 445px;
+
+}
+p.wd_paragraph4 {
+    width: 107px;
+    margin: 5px 0 0 324px;
+
+}
+p.wd_skill_4 {
+    width: 210px;
+    margin: 0 0 0 325px;
+}
+#wd_resources_title {
+    background: url(../img/overview/titles/resources_title.png) no-repeat;
+    width: 203px;
+    height: 29px;
+    margin: -370px 0 0 82px;
+}
+
+#wd_resources_bg {
+    background: url(../img/overview/wd/wd_resources_bg.png) no-repeat;
+    width: 345px;
+    height: 520px;
+    margin: -120px 0 0 20px;
+}
+p.wd_resources {
+    
+    width: 280px;
+    padding: 182px 0 0 35px;
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+}
+#wd_resources_orb {
+    background: url(../img/overview/wd/wd_resource_orb.gif) no-repeat;
+    height: 97px;
+    margin: -148px 0 0 135px;
+
+}
+#wd_equipment_bg {
+    background: url(../img/overview/wd/wd_equipment_bg.png) no-repeat;
+    height: 239px;
+    margin: -495px 0 0 10px;
+}
+#wd_equipment_title {
+    background: url(../img/overview/titles/equipment_title.png) no-repeat;
+    height: 29px;
+    margin: -167px 0 0 60px ;
+}
+#wd_equipment_desc {
+     width: 236px;
+    height: 213px;
+    margin: 16px 0 0 59px;
+}
+#belt {
+    height: 132px;
+    margin: 30px 0 0 58px;
+}
+#sword {
+    height: 132px;
+    margin: -132px 0 0 138px;
+}
+#mask {
+    height: 132px;
+    margin: -132px 0 0 219px;
+}
+#wd_progressive_title {
+    background: url(../img/overview/titles/progressive_title.png) no-repeat;
+    height: 29px;
+    margin: 17px 0 0 21px;
+}#wd_progressive {
+    background: url(../img/overview/wd/wd_progressive.png) no-repeat;
+    height: 283px;
+    margin: -18px 0 0 35px;
+}
+#wd_desc1 {
+    width: 144px;
+    float: left;
+    margin: -10px 20px 0 30px;
+}
+#wd_desc2 {
+    width: 152px;
+    float: left;
+    margin: -110px 20px 0 0;
+}
+
+#wd_desc3 {
+    width: 169px;
+    float: left;
+    margin: -110px 0 0 168px;
+    
+
+}
+.wd_vr {
+    background: url(../img/overview/titles/vr.png) no-repeat;
+    height: 110px;
+    margin: -10px 0 0 183px;
+}
+/* WITCH DOCTOR END */
+
+/* MONK BEGIN */
+#monk_overview_bg {
+    background: url(../img/overview/monk/monk_overview_bg.png) no-repeat;
+    height: 300px;
+    margin: 0 0 0 416px;
+}
+#monk_overview_title {
+    background: url(../img/overview/titles/overview_title.png) no-repeat;
+    height: 31px;
+    margin: -260px 0 0 25px;
+
+}
+#monk_overview {
+    
+   margin: 15px 0 0 27px;
+   width: 455px;
+}
+#monk_overview .monk_paragraph1 {
+    
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    text-align: left;
+    
+}
+#monk_skills_title {
+    background: url(../img/overview/titles/skills_title.png) no-repeat;
+    height: 29px;
+    margin: -90px 0 0 290px;
+}
+#monk_circle1  {
+    background: url(../img/overview/monk/monk_circle1.png) no-repeat;
+    height: 64px;
+    margin: 30px 0 0 317px;
+
+}
+.monk_zaglavie {
+    
+    font-family: Georgia,times,serif;
+    font-size: 18px;
+    color: #b26400;
+    margin: -68px 0 0 392px;
+}
+.monk_skill_1 {
+    width: 150px;
+    margin:  5px 17px 0 0;
+    text-align: left;
+    float: right;
+
+}
+#monk_circle2 {
+    background: url(../img/overview/monk/monk_circle2.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: -14px 0 0 473px;
+}
+p.monk_skill_2 {
+   width: 174px;
+   height: 137px;
+   margin: 5px 0 0 366px;
+   
+}
+p.monk_paragraph2 {
+    float: right;
+    width: 87px; 
+    height: 46px;
+    margin: -45px 108px 0 0;
+}
+#monk_circle3 {
+    background: url(../img/overview/monk/monk_circle3.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: 152px 0 0 323px;
+}
+p.monk_paragraph3 {
+    float: right;
+    width: 134px; 
+    height: 44px;
+    margin: 5px 27px 0 0;
+}
+p.monk_skill_3 {
+   width: 207px;
+   height: 180px;
+   margin: 55px 0 0 326px;
+}
+#monk_circle4 {
+    background: url(../img/overview/monk/monk_circle4.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: -68px 0 0 455px;
+}
+p.monk_paragraph4 {
+    float: right;
+    width: 132px; 
+    height: 28px;
+    margin: 12px 87px 0 0;
+}
+p.monk_skill_4 {
+   width: 202px;
+   margin: 62px 0 0 341px;
+}
+#monk_resources_title {
+    background: url(../img/overview/titles/resources_title.png) no-repeat;
+    width: 203px;
+    height: 29px;
+    margin: -370px 0 0 82px;
+}
+
+#monk_resources_bg {
+    background: url(../img/overview/monk/monk_resources_bg.png) no-repeat;
+    width: 347px;
+    height: 518px;
+    margin: 100px 0 0 10px;
+    position: relative;
+    z-index: 888;
+}
+p.monk_resources {
+    
+    width: 290px;
+    padding: 182px 0 0 39px;
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+}
+#monk_resources_orb {
+    background: url(../img/overview/monk/monk_resource_orb.gif) no-repeat;
+    height: 97px;
+    margin: -147px 0 0 133px;
+    position: relative;
+    z-index: 9999;
+
+}
+#monk_equipment_bg {
+    background: url(../img/overview/monk/monk_equipment_bg.png) no-repeat;
+    height: 346px;
+    top: -500px;
+    left: -2px;
+    position: relative;
+    z-index: 10;
+}
+#monk_equipment_title {
+    background: url(../img/overview/titles/equipment_title.png) no-repeat;
+    height: 29px;
+    margin: -723px 0 0 60px;
+}
+#monk_equipment_desc {
+    width: 236px;
+    height: 213px;
+    margin: 16px 0 0 59px;
+}
+#stone {
+    height: 132px;
+    margin: -4px 0 0 58px;
+}
+#fist {
+    height: 132px;
+    margin: -132px 0 0 138px;
+}
+#staff {
+    height: 132px;
+    margin: -132px 0 0 219px;
+}
+#monk_progressive_title {
+    background: url(../img/overview/titles/progressive_title.png) no-repeat;
+    height: 29px;
+    margin: 15px 0 0 21px;
+}#monk_progressive {
+    background: url(../img/overview/monk/monk_progressive.png) no-repeat;
+    height: 310px;
+    margin: -20px 0 0 20px;
+}
+#monk_desc1 {
+    width: 150px;
+    height: 98px;
+    margin:  -65px 0 0 30px;
+}
+
+#monk_desc2 {
+    width: 152px;
+    height: 98px;
+    margin: -112px 0 0 195px;
+}
+
+#monk_desc3 {
+    width: 169px;
+    height: 98px;
+    margin: -112px 0 0 360px;
+}
+#desc .vr {
+    background: url(../img/overview/titles/vr.png) no-repeat;
+    height: 110px;
+    margin: -95px 0 0 185px;
+}
+/* MONK END */
+
+/* DEMON HUNTER BEGIN */
+#dh_overview_bg {
+    background: url(../img/overview/dh/dh_overview_bg.png) no-repeat;
+    height: 300px;
+    margin: 0 0 0 344px;
+}
+#dh_overview_title {
+    background: url(../img/overview/titles/overview_title.png) no-repeat;
+    height: 31px;
+    margin: -260px 0 0 25px;
+
+}
+#dh_overview {
+    
+   margin: 15px 0 0 27px;
+   width: 500px;
+}
+#dh_overview .dh_paragraph1 {
+    
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    text-align: left;
+    
+}
+#dh_skills_title {
+    background: url(../img/overview/titles/skills_title.png) no-repeat;
+    height: 29px;
+    margin: -163px 0 0 290px;
+}
+#dh_circle1  {
+    background: url(../img/overview/dh/dh_circle1.png) no-repeat;
+    height: 64px;
+    margin: 30px 0 0 317px;
+
+}
+.dh_zaglavie {
+    
+    font-family: Georgia,times,serif;
+    font-size: 18px;
+    color: #b26400;
+    margin: -68px 0 0 392px;
+}
+.dh_skill_1 {
+    width: 150px;
+    margin:  5px 17px 0 0;
+    text-align: left;
+    float: right;
+
+}
+#dh_circle2 {
+    background: url(../img/overview/dh/dh_circle2.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: -14px 0 0 463px;
+}
+p.dh_skill_2 {
+   width: 174px;
+   height: 137px;
+   margin: 5px 0 0 366px;
+   
+}
+p.dh_paragraph2 {
+    float: right;
+    width: 87px; 
+    height: 46px;
+    margin: -45px 108px 0 0;
+}
+#dh_circle3 {
+    background: url(../img/overview/dh/dh_circle3.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: 62px 0 0 363px;
+}
+p.dh_paragraph3 {
+    float: right;
+    width: 95px; 
+    height: 44px;
+    margin: 5px 27px 0 0;
+}
+p.dh_skill_3 {
+   width: 169px;
+   height: 180px;
+   margin: 55px 0 0 366px;
+}
+#dh_circle4 {
+    background: url(../img/overview/dh/dh_circle4.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: 62px 0 0 458px;
+}
+p.dh_paragraph4 {
+    float: right;
+    width: 132px; 
+    height: 28px;
+    margin: 12px 102px 0 0;
+}
+p.dh_skill_4 {
+   width: 212px;
+   height: 155px;
+   margin: 62px 0 0 326px;
+}
+#dh_resources_title {
+    background: url(../img/overview/titles/resources_title.png) no-repeat;
+    width: 203px;
+    height: 29px;
+    margin: -370px 0 0 82px;
+}
+
+#dh_resources_bg {
+    background: url(../img/overview/dh/resources_bg.png) no-repeat;
+    width: 345px;
+    height: 520px;
+    margin: 100px 0 0 10px;
+}
+p.dh_resources {
+    
+    width: 290px;
+    padding: 182px 0 0 39px;
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+}
+#dh_resources_orb {
+    background: url(../img/overview/dh/dh_resource_orb.gif) no-repeat;
+    height: 97px;
+    margin: -150px 0 0 132px;
+
+}
+#dh_equipment_bg {
+    background: url(../img/overview/dh/dh_equipment_bg.png) no-repeat;
+    height: 230px;
+    margin: -468px 0 0 -2px;
+}
+#dh_equipment_title {
+    background: url(../img/overview/titles/equipment_title.png) no-repeat;
+    height: 29px;
+    margin: -184px 0 0 60px;
+}
+#dh_equipment_desc {
+    width: 236px;
+    height: 213px;
+    margin: 16px 0 0 59px;
+}
+#bow {
+    height: 132px;
+    margin: 30px 0 0 58px;
+}
+#quiver {
+    height: 132px;
+    margin: -132px 0 0 138px;
+}
+#cloak {
+    height: 132px;
+    margin: -132px 0 0 219px;
+}
+#dh_progressive_title {
+    background: url(../img/overview/titles/progressive_title.png) no-repeat;
+    height: 29px;
+    margin: 15px 0 0 21px;
+}#dh_progressive {
+    background: url(../img/overview/dh/dh_progressive.png) no-repeat;
+    height: 252px;
+    margin: 10px 0 0 35px;
+}
+#dh_desc1 {
+    width: 144px;
+    height: 79px;
+    margin: -30px 0 0 30px;
+}
+#dh_desc2 {
+    width: 152px;
+    height: 79px;
+    margin: -110px 0 0 190px;
+}
+
+#dh_desc3 {
+    width: 169px;
+    height: 110px;
+    margin: -110px 0 0 360px;
+}
+#desc {
+    margin: 30px 0 0 0;
+}
+.dh_vr {
+    background: url(../img/overview/titles/vr.png) no-repeat;
+    height: 110px;
+    margin: -80px 0 0 180px;
+}
+/* DEMON HUNTER END */
+
+/* BARBARIAN BEGIN */
+#overview_bg {
+    background: url(../img/overview/barb/barb_overview_bg.png) no-repeat;
+    height: 300px;
+    margin: 0 0 0 383px;
+}
+#overview_title {
+    background: url(../img/overview/titles/overview_title.png) no-repeat;
+    height: 31px;
+    margin: -260px 0 0 25px;
+
+}
+#overview {
+    
+   margin: 15px 0 0 27px;
+   width: 500px;
+}
+#overview .paragraph1 {
+    
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    text-align: left;
+    
+}
+#skills_title {
+    background: url(../img/overview/titles/skills_title.png) no-repeat;
+    height: 29px;
+    margin: -170px 0 0 290px;
+}
+#circle1  {
+    background: url(../img/overview/barb/barb_circle1.png) no-repeat;
+    height: 64px;
+    margin: 30px 0 0 317px;
+
+}
+.zaglavie {
+    
+    font-family: Georgia,times,serif;
+    font-size: 18px;
+    color: #b26400;
+    margin: -68px 0 0 392px;
+}
+.skill_1 {
+    width: 140px;
+    margin:  5px 27px 0 0;
+    text-align: left;
+    float: right;
+
+}
+#circle2 {
+    background: url(../img/overview/barb/barb_circle2.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: -14px 0 0 463px;
+}
+p.skill_2 {
+   width: 174px;
+   height: 137px;
+   margin: 5px 0 0 366px;
+   
+}
+p.paragraph2 {
+    float: right;
+    width: 87px; 
+    height: 46px;
+    margin: -45px 108px 0 0;
+}
+#circle3 {
+    background: url(../img/overview/barb/barb_circle3.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: 62px 0 0 363px;
+}
+p.paragraph3 {
+    float: right;
+    width: 85px; 
+    height: 44px;
+    margin: 5px 37px 0 0;
+}
+p.skill_3 {
+   width: 169px;
+   height: 180px;
+   margin: 55px 0 0 366px;
+}
+#circle4 {
+    background: url(../img/overview/barb/barb_circle4.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: 62px 0 0 458px;
+}
+p.paragraph4 {
+    float: right;
+    width: 122px; 
+    height: 28px;
+    margin: 12px 112px 0 0;
+}
+p.skill_4 {
+   width: 202px;
+   height: 155px;
+   margin: 45px 0 0 326px;
+}
+#resources_title {
+    background: url(../img/overview/titles/resources_title.png) no-repeat;
+    width: 203px;
+    height: 29px;
+    margin: -370px 0 0 82px;
+}
+
+#resources_bg {
+    background: url(../img/overview/barb/barb_resources_bg.png) no-repeat;
+    width: 332px;
+    height: 507px;
+    margin: 100px 0 0 20px;
+}
+p.resources {
+    
+    width: 270px;
+    padding: 169px 0 0 36px;
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    margin-top: 100px\9;
+}
+#resources_orb {
+    background: url(../img/overview/barb/barb_resource_orb.gif) no-repeat;
+    height: 97px;
+    margin: -147px 0 0 130px;
+
+}
+#equipment_bg {
+    background: url(../img/overview/barb/barb_equipment_bg.png) no-repeat;
+    height: 265px;
+    margin: -468px 0 0 13px;
+}
+#equipment_title {
+    background: url(../img/overview/titles/equipment_title.png) no-repeat;
+    height: 29px;
+    margin: -200px 0 0 60px;
+}
+#equipment_desc {
+    width: 236px;
+    height: 213px;
+    margin: 16px 0 0 59px;
+}
+#belt {
+    height: 132px;
+    margin: 30px 0 0 58px;
+}
+#sword {
+    height: 132px;
+    margin: -132px 0 0 138px;
+}
+#axe {
+    height: 132px;
+    margin: -132px 0 0 219px;
+}
+#progressive_title {
+    background: url(../img/overview/titles/progressive_title.png) no-repeat;
+    height: 29px;
+    margin: 15px 0 0 21px;
+}#progressive {
+    background: url(../img/overview/barb/barb_progressive.png) no-repeat;
+    height: 304px;
+    margin: -5px 0 0 35px;
+}
+#desc1 {
+    width: 144px;
+    height: 79px;
+    margin: -30px 0 0 30px;
+}
+#desc2 {
+    width: 152px;
+    height: 79px;
+    margin: -110px 0 0 190px;
+}
+
+#desc3 {
+    width: 169px;
+    height: 94px;
+    margin: -110px 0 0 360px;
+}
+.vr {
+    background: url(../img/overview/titles/vr.png) no-repeat;
+    height: 110px;
+    margin: -80px 0 0 180px;
+}
+/*BARBARIAN END */
+
+/*CRUSADER START */
+#crusader_overview_bg {
+    background: url(../img/overview/crusader/crusader_overview_bg.html) no-repeat;
+    height: 300px;
+    margin: 0 0 0 383px;
+}
+#crusader_overview_title {
+    background: url(../img/overview/titles/overview_title.png) no-repeat;
+    height: 31px;
+    margin: -260px 0 0 25px;
+
+}
+#crusader_overview {
+    
+   margin: 15px 0 0 27px;
+   width: 500px;
+}
+#crusader_overview .paragraph1 {
+    
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    text-align: left;
+    
+}
+#crusader_skills_title {
+    background: url(../img/overview/titles/skills_title.png) no-repeat;
+    height: 29px;
+    margin: -170px 0 0 290px;
+}
+#crusader_circle1  {
+    background: url(../img/overview/crusader/crusader_circle1.png) no-repeat;
+    height: 64px;
+    margin: 30px 0 0 317px;
+
+}
+.zaglavie {
+    
+    font-family: Georgia,times,serif;
+    font-size: 18px;
+    color: #b26400;
+    margin: -68px 0 0 392px;
+}
+.skill_1 {
+    width: 140px;
+    margin:  5px 27px 0 0;
+    text-align: left;
+    float: right;
+
+}
+#crusadercircle2 {
+    background: url(../img/overview/crusader/crusader_circle2.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: -14px 0 0 463px;
+}
+p.skill_2 {
+   width: 174px;
+   height: 137px;
+   margin: 5px 0 0 366px;
+   
+}
+p.paragraph2 {
+    float: right;
+    width: 87px; 
+    height: 46px;
+    margin: -45px 108px 0 0;
+}
+#crusadercircle3 {
+    background: url(../img/overview/crusader/crusader_circle3.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: 62px 0 0 363px;
+}
+p.paragraph3 {
+    float: right;
+    width: 85px; 
+    height: 44px;
+    margin: 5px 37px 0 0;
+}
+p.skill_3 {
+   width: 169px;
+   height: 180px;
+   margin: 55px 0 0 366px;
+}
+#crusadercircle4 {
+    background: url(../img/overview/crusader/crusader_circle4.png) no-repeat;
+    height: 64px;
+    width: 64px;
+    margin: 62px 0 0 458px;
+}
+p.paragraph4 {
+    float: right;
+    width: 122px; 
+    height: 28px;
+    margin: 12px 112px 0 0;
+}
+p.skill_4 {
+   width: 202px;
+   height: 155px;
+   margin: 45px 0 0 326px;
+}
+#crusaderresources_title {
+    background: url(../img/overview/titles/resources_title.png) no-repeat;
+    width: 203px;
+    height: 29px;
+    margin: -370px 0 0 82px;
+}
+
+#crusaderresources_bg {
+    background: url(../img/overview/crusader/crusader_resources_bg.png) no-repeat;
+    width: 332px;
+    height: 507px;
+    margin: 100px 0 0 20px;
+}
+p.crusaderresources {
+    
+    width: 270px;
+    padding: 169px 0 0 36px;
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    margin-top: 100px\9;
+}
+#crusaderresources_orb {
+    background: url(../img/overview/crusader/crusader_resource_orb.gif) no-repeat;
+    height: 97px;
+    margin: -147px 0 0 130px;
+
+}
+#crusaderequipment_bg {
+    background: url(../img/overview/crusader/crusader_equipment_bg.html) no-repeat;
+    height: 265px;
+    margin: -468px 0 0 13px;
+}
+#equipment_title {
+    background: url(../img/overview/titles/equipment_title.png) no-repeat;
+    height: 29px;
+    margin: -200px 0 0 60px;
+}
+#equipment_desc {
+    width: 236px;
+    height: 213px;
+    margin: 16px 0 0 59px;
+}
+#belt {
+    height: 132px;
+    margin: 30px 0 0 58px;
+}
+#sword {
+    height: 132px;
+    margin: -132px 0 0 138px;
+}
+#axe {
+    height: 132px;
+    margin: -132px 0 0 219px;
+}
+#progressive_title {
+    background: url(../img/overview/titles/progressive_title.png) no-repeat;
+    height: 29px;
+    margin: 15px 0 0 21px;
+}#crusaderprogressive {
+    background: url(../img/overview/crusader/crusader_progressive.png) no-repeat;
+    height: 304px;
+    margin: -5px 0 0 35px;
+}
+#desc1 {
+    width: 144px;
+    height: 79px;
+    margin: -30px 0 0 30px;
+}
+#desc2 {
+    width: 152px;
+    height: 79px;
+    margin: -110px 0 0 190px;
+}
+
+#desc3 {
+    width: 169px;
+    height: 94px;
+    margin: -110px 0 0 360px;
+}
+.vr {
+    background: url(../img/overview/titles/vr.png) no-repeat;
+    height: 110px;
+    margin: -80px 0 0 180px;
+}
+/*CRUSADER END */
+
+/* WIZZARD BEGIN */
+#wiz_overview_bg {
+    background: url(../img/overview/wiz/wiz_overview_bg.png) no-repeat;
+    height: 232px;
+    margin: 0 0 0 247px;
+}
+#wiz_overview_title {
+    background: url(../img/overview/titles/overview_title.png) no-repeat;
+    height: 31px;
+    margin: -200px 0 0 25px;
+
+}
+#wiz_overview {
+    
+   margin: 15px 0 0 27px;
+   width: 470px;
+}
+#wiz_overview .wiz_paragraph1 {
+    
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+    text-align: left;
+    
+}
+
+#wiz_skills_title {
+    background: url(../img/overview/titles/skills_title.png) no-repeat;
+    height: 29px;
+    margin: -90px 0 0 290px;
+}
+#wiz_circle1  {
+    background: url(../img/overview/wiz/wiz_circle1.png) no-repeat;
+    height: 64px;
+    margin: 20px 0 0 300px;
+
+}
+.wiz_zaglavie {
+    
+    font-family: Georgia,times,serif;
+    font-size: 18px;
+    color: #b26400;
+
+}.wiz_skill_11 {
+    width: 141px;
+    margin: 5px 0 0 370px
+
+}
+.wiz_skill_1 {
+    width: 167px;
+    margin: 0 0 0 300px;
+    position: relative;
+    z-index: 10000;
+    
+
+}
+#wiz_circle2 {
+    background: url(../img/overview/wiz/wiz_circle2.png) no-repeat;
+    height: 64px;
+    margin: -15px 0 0 475px;
+
+}
+p.wiz_skill_2 {
+    width: 159px;
+    margin: 0 0 0 366px;
+
+   
+}
+p.wiz_paragraph2 {
+    width: 110px;
+    float: right;
+    margin: -45px 85px 0 0;
+
+}
+#wiz_circle3 {
+    background: url(../img/overview/wiz/wiz_circle3.png) no-repeat;
+    height: 64px;
+    margin: 40px 0 0 365px;
+}
+p.wiz_paragraph3 {
+    width: 90px;
+    float: right;
+    margin: 5px 32px 0 0 ;
+
+}
+p.wiz_skill_3 {
+    width: 169px;
+    margin: 56px 0 0 365px;
+}
+#wiz_circle4 {
+    background: url(../img/overview/wiz/wiz_circle4.png) no-repeat;
+    height: 64px;
+    margin: 50px 0 0 445px;
+
+}
+p.wiz_paragraph4 {
+    width: 107px;
+    margin: 5px 0 0 325px;
+
+}
+p.wiz_skill_4 {
+    width: 210px;
+    margin: 0 0 0 326px;
+}
+#wiz_resources_title {
+    background: url(../img/overview/titles/resources_title.png) no-repeat;
+    width: 203px;
+    height: 29px;
+    margin: -370px 0 0 82px;
+}
+
+#wiz_resources_bg {
+    background: url(../img/overview/wiz/wiz_resources_bg.png) no-repeat;
+    width: 345px;
+    height: 519px;
+    margin: -80px 0 0 10px;
+    position: relative;
+    z-index: 8888;
+}
+p.wiz_resources {
+    
+    width: 266px;
+    padding: 182px 0 0 45px;
+    font-family: Georgia,times,serif;
+    font-size: 14px;
+}
+#wiz_resources_orb {
+    background: url(../img/overview/wiz/wiz_resource_orb.gif) no-repeat;
+    height: 97px;
+    margin: -150px 0 0 132px;
+    position: relative;
+    z-index: 9999;
+    
+
+}
+#wiz_equipment_bg {
+    background: url(../img/overview/wiz/wiz_equipment_bg.png) no-repeat;
+    height: 262px;
+    margin: -415px 0 0 -10px;
+}
+@-moz-document url-prefix() {
+                        #wiz_equipment_bg{
+                            background: url(../img/overview/wiz/wiz_equipment_bg.png) no-repeat;
+                            height: 262px;
+                            margin: -440px 0 0 -10px;
+                    }
+                    }
+#wiz_equipment_title {
+    background: url(../img/overview/titles/equipment_title.png) no-repeat;
+    height: 29px;
+    margin: -184px 0 0 60px;
+}
+#wiz_equipment_desc {
+     width: 236px;
+    height: 213px;
+    margin: 16px 0 0 59px;
+}
+#orb {
+    height: 132px;
+    margin: 30px 0 0 58px;
+}
+#wand {
+    height: 132px;
+    margin: -132px 0 0 138px;
+}
+#hat {
+    height: 132px;
+    margin: -132px 0 0 219px;
+}
+#wiz_progressive_title {
+    background: url(../img/overview/titles/progressive_title.png) no-repeat;
+    height: 29px;
+    margin: 15px 0 0 21px;
+}#wiz_progressive {
+    background: url(../img/overview/wiz/wiz_progressive.png) no-repeat;
+    height: 280px;
+    margin: 0 0 0 45px;
+}
+#wiz_desc1 {
+    width: 144px;
+    height: 79px;
+    margin: -30px 0 0 30px;
+}
+#wiz_desc2 {
+    width: 152px;
+    height: 79px;
+    margin: -165px 0 0 190px;
+}
+
+#wiz_desc3 {
+    width: 169px;
+    height: 94px;
+    margin: -165px 0 0 360px;
+}
+#desc {
+    margin: 30px 0 0 0;
+}
+.wiz_vr {
+    background: url(../img/overview/titles/vr.png) no-repeat;
+    height: 165px;
+    margin: -80px 0 0 180px;
+}
+/* WIZZARD END */
+
+/*OVER VIEW CSS END*/
+
+
+
+
+
+
+/* GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES  */
+.guide_box {width: 500px;height: auto;margin: 0 auto;}
+.guide_box:hover {outline: 1px solid #342518;}
+/* GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES GUIDES  */
+
+
+.gender_change { background: url('../img/thegame/gender_bg.png') 0 -1px no-repeat; background-size: 85px; width: 140px; height: 70px; position: absolute; margin: 10px 0 0 25px; z-index: 999; }
+.gender_change img { border: none;  cursor: pointer; width: 40px; }
+
+
+#content {width: 560px;float: left; margin: 16px 0 0 0px; background: url(../img/post_bg.jpg) repeat-y;}
+#wrapper {width: 1102px; height: 800px; background: url(../img/devil_angel.png) no-repeat top center; margin: 0 auto; padding: 150px 0px 0 0px;margin-top: 50px;}
+
+
+/* modal - world map */
+.modalWorldMap {
+    display: none;
+    position: fixed; 
+    z-index: 9999;
+	padding-top: 200px;
+    left: 0;
+    top: -40px !important;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.48);
+}
+
+.modal-content-worldmap {
+    background-color: #fefefe;
+    border: 1px solid #522417;
+	box-shadow: 0 0 5px #000000, 0 0 25px #000000;
+    width: 900px; 
+    height: 670px; 
+	margin: auto;
+}
+
+.modal_close-worldmap {
+    color: #ada090;
+    float: right;
+    font-size: 48px;
+    font-weight: bold;
+	position: absolute;
+    margin: -40px 0 0 910px;
+}
+
+.modal_close-worldmap:hover, .modal_close-worldmap:focus {
+    color: #9e5901;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* modal - world map */

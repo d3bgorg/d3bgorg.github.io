@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from www.d3bg.org/diablo3/fundamentals/kanai/recipe8.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 10:28:13 GMT -->
+<head>
+  <meta charset="utf-8">
+  <title>D3BG Kanai's Cube</title>
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+  <script src="jquery-1.12.4.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="rules.js"></script>
+  <script type="text/javascript" src="https://eu.battle.net/d3/static/js/tooltips.js"></script>
+  <link rel="stylesheet" href="../../../fonts/font-awesome/css/font-awesome.min.css">
+  <script>
+	$(document).ready(function(){
+		$(".draggable").draggable({revert: "invalid"});
+		$(".grid").droppable({
+			accept: '.malak, .big',
+			greedy: true,
+			snap: true,
+			drop: handleDropEvent,
+			tolerance: "pointer",
+		});
+		$(".grid_bottom").droppable({
+			accept: '.malak',
+			greedy: true,
+			snap: true,
+			drop: handleDropEvent,
+			tolerance: "pointer",
+		});
+    });
+	function handleDropEvent (event, ui) {
+		if ($(this).hasClass('draggable')) {
+			ui.draggable.draggable('option', 'revert', true);		
+			return false;
+		}
+		if (ui.draggable.hasClass('big')) {
+			if ($(this).hasClass('occupied')) {
+				ui.draggable.draggable('option', 'revert', true);		
+				return false;
+			} else if ($(this).hasClass('occupied2')) {
+				ui.draggable.draggable('option', 'revert', true);		
+				return false;
+			} else {
+				$(ui.draggable).addClass('conquer');
+				if ($(this).hasClass('drop1')) { $('.grid_mark').droppable("enable").removeClass('occupied'); $('.drop4').droppable("disable").addClass('occupied'); }
+				if ($(this).hasClass('drop2')) { $('.grid_mark').droppable("enable").removeClass('occupied'); $('.drop5').droppable("disable").addClass('occupied'); }
+				if ($(this).hasClass('drop3')) { $('.grid_mark').droppable("enable").removeClass('occupied'); $('.drop6').droppable("disable").addClass('occupied'); }
+				if ($(this).hasClass('drop4')) { $('.grid_mark').droppable("enable").removeClass('occupied'); $('.drop7').droppable("disable").addClass('occupied'); 
+					/* Ako receptata ima 2 golemi itema - aktivirai tova: $('.drop1').addClass('occupied2'); */ }
+				if ($(this).hasClass('drop5')) { $('.grid_mark').droppable("enable").removeClass('occupied'); $('.drop8').droppable("disable").addClass('occupied'); 
+					/* Ako receptata ima 2 golemi itema - aktivirai tova:$('.drop2').addClass('occupied2'); */ }
+				if ($(this).hasClass('drop6')) { $('.grid_mark').droppable("enable").removeClass('occupied'); $('.drop9').droppable("disable").addClass('occupied'); 
+					/* Ako receptata ima 2 golemi itema - aktivirai tova:$('.drop3').addClass('occupied2'); */ }
+			}
+		}
+		if (ui.draggable.hasClass('malak')) {
+			if ($(this).hasClass('occupied')) {
+				ui.draggable.draggable('option', 'revert', true);		
+				return false;
+			} else {
+				$(ui.draggable).addClass('conquer');  
+				if ($(this).hasClass('drop4')) { $('.grid_mark').droppable("enable").removeClass('occupied2'); $('.drop1').addClass('occupied2'); } 
+				if ($(this).hasClass('drop5')) { $('.grid_mark').droppable("enable").removeClass('occupied2'); $('.drop2').addClass('occupied2'); }
+				if ($(this).hasClass('drop6')) { $('.grid_mark').droppable("enable").removeClass('occupied2'); $('.drop3').addClass('occupied2'); }
+				if ($(this).hasClass('drop7')) { $('.grid_mark').droppable("enable").removeClass('occupied2'); $('.drop4').addClass('occupied2'); }
+				if ($(this).hasClass('drop8')) { $('.grid_mark').droppable("enable").removeClass('occupied2'); $('.drop5').addClass('occupied2'); }
+				if ($(this).hasClass('drop9')) { $('.grid_mark').droppable("enable").removeClass('occupied2'); $('.drop6').addClass('occupied2'); }
+			}
+		}
+		$(this).append(ui.draggable);
+		
+		ui.draggable.position({of: $(this), my: 'left top', at: 'left top'});
+		droprules();
+		$(function(){
+			var numItems = $('.cube_mat').length;
+			var numItems_dragged = $('.conquer').length;
+			if(numItems == numItems_dragged){ $(".transmute_button").prop('disabled', false); }
+			$(".transmute_button").click(function(){
+				$(this).prop('disabled', true);
+				$(".droppable_grid .cube_mat").hide();
+				$(".transmute_result").show();
+				setTimeout(function(){
+					$(".transmute_result").fadeOut("5000");
+				}, 4000);
+				$(".grid_mark").droppable("enable").removeClass('occupied').removeClass('occupied2');
+				
+			});
+		});
+	}
+	$('document').ready(function(){
+		$(".refresh_button").click(function(){
+			location.reload();
+		});
+	});
+  </script>
+</head>
+<body>
+
+<div class="transmute_result extractpop">Легендарният ефект е записан във вашата колекция!</div>
+<div class="kanai-cube">
+	<div class="droppable_grid">
+		<!-- RESULT -->
+		<div class="grid drop1 grid_mark"></div><div class="grid drop2 grid_mark"></div><div class="grid drop3 grid_mark"></div>
+		<div class="grid drop4 grid_mark"></div><div class="grid drop5 grid_mark"></div><div class="grid drop6 grid_mark"></div>
+		<div class="grid_bottom drop7 grid_mark"></div><div class="grid_bottom drop8 grid_mark"></div><div class="grid_bottom drop9 grid_mark"></div>
+	</div>
+</div><!--
+<div class="mat_container">
+	<div class="draggable cube_mat grid malak" id="mat1"><img src="http://www.d3bg.org/diablo3/fundamentals/imgs/kanai-mats/1.png" style="width: 40px; height: 40px;" /></div>
+	<div class="draggable cube_mat grid malak" id="mat2"><img src="http://www.d3bg.org/diablo3/fundamentals/imgs/kanai-mats/2.png" style="width: 40px; height: 40px;" /></div>
+	<div class="draggable cube_mat grid malak" id="mat3"><img src="http://www.d3bg.org/diablo3/fundamentals/imgs/kanai-mats/3.png" style="width: 40px; height: 40px;" /></div>
+	<div class="draggable cube_mat grid malak" id="mat4"><img src="http://www.d3bg.org/diablo3/fundamentals/imgs/kanai-mats/4.png" style="width: 40px; height: 40px;" /></div>
+	<div class="draggable cube_mat grid malak" id="mat5"><img src="http://www.d3bg.org/diablo3/fundamentals/imgs/kanai-mats/5.png" style="width: 40px; height: 40px;" /></div>
+	<div class="draggable cube_mat grid malak" id="mat6"><img src="http://www.d3bg.org/diablo3/fundamentals/imgs/kanai-mats/6.png" style="width: 40px; height: 40px;" /></div>
+	<div class="draggable cube_mat grid big" style="height: 90px;bottom: 0;"><img src="http://www.d3bg.org/diablo3/fundamentals/imgs/kanai-mats/bovine-bardiche.png" style="width: 40px; height: 90px;" /></div>
+</div>-->
+<span style="font-family: 'diablo'; position: absolute; margin: -3px 0 0 -50px; width: 575px; text-align: center; color: #806351; text-shadow: 0 2px 2px #473123;">Extract Legendary Power</span>
+<span style="font-family:'diablo'; position: absolute; margin: 18px 0 0 250px; width: 215px; text-align: center; color: #806351; font-size: 13px; text-shadow: 0 2px 2px #473123;">Инвентар</span>
+<div class="mat_container">
+	<div class="draggable cube_mat grid malak" id="mat1"><img src="../imgs/kanai-mats/1.png" style="width: 40px; height: 40px;" class="orange_item" /><span>1</span></div>
+	<div class="draggable cube_mat grid malak" id="mat2"><img src="../imgs/kanai-mats/2.png" style="width: 40px; height: 40px;" class="orange_item" /><span>1</span></div>
+	<div class="draggable cube_mat grid malak" id="mat3"><img src="../imgs/kanai-mats/3.png" style="width: 40px; height: 40px;" class="orange_item" /><span>1</span></div>
+	<div class="draggable cube_mat grid malak" id="mat4"><img src="../imgs/kanai-mats/4.png" style="width: 40px; height: 40px;" class="orange_item" /><span>1</span></div>
+	<div class="draggable cube_mat grid malak" id="mat5"><img src="../imgs/kanai-mats/5.png" style="width: 40px; height: 40px;" class="orange_item" /><span>1</span></div>
+	<div class="draggable cube_mat grid malak" id="mat6"><img src="../imgs/kanai-mats/7.png" style="width: 40px; height: 40px;" class="rare_item" /><span>5</span></div>
+	<div class="draggable cube_mat grid big " style="height: 85px; bottom: 0;" onmouseover="Tip('<img src=img/items/extract.png width=386>')" onmouseup="Tip('<img src=img/items/extract.png width=386>')" onmouseout="UnTip();" onmousedown="UnTip();"><img src="http://media.blizzard.com/d3/icons/items/large/unique_handxbow_012_x1_demonhunter_male.png" class="orange_item" style="width: 40px; height: 85px;" /></div>
+</div>
+<script type="text/javascript" src="tooltip.js"></script>
+<input type="button" value="Преобразувай" class="transmute_button" disabled="disabled" />
+<span class="refresh_button" onmouseover="Tip('<div style=\'padding:5px;\'>Започни от начало</div>')" onmouseout="UnTip();"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8fbd2b1fcc82d0e0',t:'MTczNTg0NjI3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../../../cdn-cgi/challenge-platform/h/b/scripts/jsd/787bc399e22f/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+<!-- Mirrored from www.d3bg.org/diablo3/fundamentals/kanai/recipe8.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 10:28:13 GMT -->
+</html>

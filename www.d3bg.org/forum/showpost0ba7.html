@@ -1,0 +1,1230 @@
+
+
+
+    
+<!DOCTYPE HTML>
+<html>
+    
+<!-- Mirrored from www.d3bg.org/forum/showpost.php?groupid=4&catid=9&postid=1516&page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 11:42:46 GMT -->
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="google-site-verification" content="D7jQncO1zK8xli4CEQfaCp35i43HQCNk9kK1LBcmI-w" />
+        <meta name="distribution" content="global" />
+        <meta name="language" content="bg" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="Diablo Bulgaria, Варварин, Знахар, Магьосник, Демон Хънтър, Монах, diablo III, diablo 4, diablo iv, друид, druid, фен сайт, гейминг, blizzard entertainment" />
+        <meta name="description" content="Най-големият български фен сайт на Диабло игрите. Тук ще намерите всичко за diablo игрите както и много допълнителни материали и инструменти, които ще направят вашата игра по интересна." />
+				<title>Developer Journal: Crowd Control Changes - Диабло България - Форум</title>
+		<meta property="og:title" content="Developer Journal: Crowd Control Changes - Диабло България - Форум" />
+		<meta property="og:site_name" content="D3BG" />
+		<meta property="og:description" content="Wyatt Cheng написа:
+
+Скоро след пускането на Diablo III , си спомнян че гледах Jay (Jay Wilson) да играе с неговия barbarian. Той убиваше и правеше на парчета, всички чудовища по пътя си. Но..." />
+		<meta property="og:image" content="http://bnetcmseu-a.akamaihd.net/cms/blog_header/6CWKZQCU7LX41346400460848.jpg" />		
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../img/fav.ico" />
+		<link rel="stylesheet" href="../css/style97ed.css?v4.1" type="text/css"/>
+		<link rel="stylesheet" href="../fonts/fontawesome-free-5.11.2-web/css/all.css">
+		<link rel="alternate" type="application/rss+xml" title="Diablo България :: Новини" href="../rss.php" />
+		<link rel="alternate" type="application/rss+xml" title="Diablo България :: Форум :: Последно коментирани теми" href="../rss-forum.php" />
+		<script type="text/javascript" src="../js/jquery.1.5.1.min.js"></script>
+        <script src="../js/jquery.tools.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../js/d3tooltip2.js"></script>
+        <script type="text/javascript" src="../js/forumjse4d7.js?v3.3"></script>
+		<!-- markItUp! -->
+		<script type="text/javascript" src="../markitup/jquery.markitup.js"></script>
+		<script type="text/javascript" src="../markitup/sets/bbcode/setf9e3.js?v=1.1"></script>
+		<link rel="stylesheet" type="text/css" href="../markitup/skins/diablo3/style.css" />
+		<link rel="stylesheet" type="text/css" href="../markitup/skins/diablo3/style_admin.css" />
+		<link rel="stylesheet" type="text/css" href="../markitup/sets/bbcode/stylef9e3.css?v=1.1" />
+		<script language="javascript">
+		$(document).ready(function(){ $('#bbcode').markItUp(mySettings); });
+		</script>
+		<link rel="stylesheet" type="text/css" href="../js/lightbox/themes/default/jquery.lightbox.css" />
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="js/lightbox/themes/default/jquery.lightbox.ie6.css" /><![endif]-->
+		<script type="text/javascript" src="../js/lightbox/jquery.lightbox.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.lightbox').lightbox();
+			$('#bgeffect_activate').click(function() {
+				$('#bgeffect').fadeIn("slow");
+				$('#bgeffect_skull').fadeIn("slow");
+			});
+		});
+		</script>
+
+		<!--<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+		<script>
+		  var OneSignal = window.OneSignal || [];
+		  OneSignal.push(function() {
+			OneSignal.init({
+			  appId: "4e65b1a3-7c46-4f57-bd93-d8766190fec0",
+			});
+		  });
+		</script>-->
+    </head><!-- background-a на body-то трябва да се променя динамично -->
+	<body style=" background: black url('../img/vessel_of_hatred_bg28e0e.jpg?v=8') no-repeat top center !important; background-size: 1702px !important; background-position-y: -25px !important;">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1767229986938439";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/javascript">
+	function loadx(data) {
+	  document.write(data.html);
+	}
+	</script>
+        <div class="turbo_container">
+        <div id="header">
+		<div class="d3bg_menu_dropdown"></div>
+		<div class="d3bg_menu_dropdown_links">
+			<a href="../diablo2/index.html"><div id="d3bg_menu_dropdown_links_d2"></div></a>
+			<a href="../diablo3/index.html"><div id="d3bg_menu_dropdown_links_d3"></div></a>
+			<a href="../diablo4/index.html"><div id="d3bg_menu_dropdown_links_d4"></div></a>
+			<a href="showcat205e.html?groupid=12&amp;catid=36"><div id="d3bg_menu_dropdown_links_di"></div></a>
+		</div>
+<!-- video header start -->
+<!-- video header end -->
+		<a class="top_nav_buttons" id="statii" href="../index.html">Статии</a> <span id="igrata" class="top_nav_buttons">Играта</span> <a id="logo" title="Начало" href="../index.html">D3BG Logo</a>
+            <a id="djadji" class="top_nav_buttons"  href="../media.html">Медия</a> <a id="forum" class="top_nav_buttons" href="index.html">Форум</a>
+<script type="text/javascript" src="../js/header_dropdown.js"></script>
+<script type="text/javascript" src="../js/tooltipe209.js?v=1.0.0"></script>
+<script type="text/javascript" src="../js/jquery.cookie7839.js?v=1.2"></script>
+<!-- load jQuery 3.2.1 -->
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.js"></script>
+<script>var $countdown = jQuery.noConflict(true);</script>
+
+
+<a href="../discord/index.html" onmouseover="Tip('Discord сървър')" onmouseout="UnTip();"><div class="join_discord_chat"></div></a>
+<a href="https://blizzard.com/invite/krDZHWZV" onmouseover="Tip('Battle.net чат група')" onmouseout="UnTip();"><div class="join_bnet_chat"></div></a>
+
+<link type="application/opensearchdescription+xml" rel="search"  href="../opensearch.xml"/>
+
+ 
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.d3bg.org/forum/showpost.php?groupid=4&amp;catid=9&amp;postid=1516&amp;page=1">
+
+
+
+<!-- EG soundtrack START -->
+		<style type="text/css">
+		.d2soundtrack_trigger { display: none; background: url('../img/d2soundtrack_trigger.png') 0 0; width: 98px; height: 53px; position: absolute; z-index: 999; margin: 350px 0 0 -136px; cursor: pointer; } 
+		.d2soundtrack_trigger_active { background: url('../img/d2soundtrack_trigger.png') 0 -106px; width: 98px; height: 53px; position: absolute; z-index: 9999; margin: 350px 0 0 -136px; }
+		.d2soundtrack_trigger:hover { background: url('../img/d2soundtrack_trigger.png') 0 -53px; width: 98px; height: 53px; position: absolute; z-index: 9999; }
+		 .equalizer { position: absolute; margin: 411px 0 0 -4px; display: none; } 		</style>
+		<script type="text/javascript">
+		  $(document).ready(function(){
+			$('.d2soundtrack_trigger').click(function() {
+				$(this).removeClass('d2soundtrack_trigger');
+				$(this).addClass('d2soundtrack_trigger_active');
+				$('.equalizer').fadeIn("slow");
+				document.getElementById('2soundtrack').play();
+			});
+			$('.forum_bg2 img, .post_content img').error(function(){
+				$(this).attr('src', '../img/missing_images.png');
+			});
+		  });
+		</script>
+		<!--<div class="equalizer"><img src="https://www.d3bg.org/img/equalizer.gif" /></div>-->
+		<div class="d2soundtrack_trigger" 
+				></div>
+		<audio id="2soundtrack" src="../img/d2soundtrack.html"></audio>
+<!-- EG soundtrack END -->
+
+
+<a href="../discord/index.html" class="new_feature_discord" style="display:none;" target="_blank"></a>
+<div class="jquery_discord_setcookie" style="display:none;"></div>
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.video_frame').click(function() {
+		var video_iframe = $(this).data('youtube-iframe');
+		$(this).html('<iframe width="467" height="264" style="border: none;" src="' + video_iframe + '" frameborder="no" allowfullscreen></iframe>');
+	});
+	$('.video_frame').hover(function (){
+		var video_playbtn = $(this).data('youtube-playbtn');
+		$('.playbtn-' + video_playbtn).css("opacity", "1");
+		}, function(){
+		var video_playbtn = $(this).data('youtube-playbtn');
+		$('.playbtn-' + video_playbtn).css("opacity", "0.7");
+	});
+	$('body').delegate('.spoiler_tag', 'click', function () {
+		$(this).removeClass('spoiler_tag').addClass('spoiler_tag_revealed').trigger('mouseout').removeAttr('onmouseover').removeAttr('onmouseout');
+	});
+	
+	
+	$('.linkPreview').each(function() {
+		var url = $(this).html();
+		var parent = $(this);
+		$.get('../linkspreviewc461.html?url='+url, function(data){
+			parent.html(data);
+			parent.find('.linkpreview_content').removeClass('d-none');
+			parent.css({'word-wrap': 'normal', 'width': '100%'});
+		});
+	});
+	$(".jquery_discord_setcookie").click(function() {
+		$.cookie('new_feature_discord', '1', { expires: 100, path: '/' });
+		$('.jquery_discord_setcookie, .new_feature_discord').hide();
+	});
+});
+</script>
+
+
+
+        </div>
+		
+        <div id="forum_container">
+			<div id="bgeffect_activate" style="position: absolute; margin: -42px 0 0 511px; cursor: pointer; width: 83px; height: 43px;"></div>
+			<div id="bgeffect_skull" style="position: absolute; margin: -44px 0 0 509px; display: none;"><img src="../img/skull_effect_bg.png" alt="#" /></div>
+
+
+
+            <div id="forum_content">
+
+						
+				                <div id="forum_userline">
+                    <p>[ <a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Форум</a> ] [ <a href="showpostb4da.html?groupid=4&amp;catid=10&amp;postid=59"><i class="fas fa-gavel" aria-hidden="true"></i> Правила</a> ] [ <a href="https://www.d3bg.org/forum/users.php?sort=reputation&amp;order=desc"><i class="fas fa-users" aria-hidden="true"></i> Потребители</a> ] [ <a id="search_trigger" href="#"><i class="fas fa-search" aria-hidden="true"></i> Търсачка</a> ] [ <a href="../useful_topics.html"><i class="fas fa-lightbulb" aria-hidden="true"></i> Полезни теми</a> ] | <i class="fas fa-text-height" id="custom_fontsize" onmouseover="Tip('Размер на шрифта')" onmouseout="UnTip();"></i></p>
+                    
+                    <script language="javascript">
+                //  Developed by Roshan Bhattarai 
+                //  Visit http://roshanbh.com.np for this script and more.
+                //  This notice MUST stay intact for legal use
+
+                $(document).ready(function()
+                {
+                    $("#login_form").submit(function()
+                    {
+                        $("#msgbox").removeClass().addClass('messagebox').text('Валидиране....').fadeIn(1000);
+                        $.post("../ajax_login.html", { username:$('#username').val(), password:$('#password').val(),remember:$('#remember:checked').val(), rand:Math.random() }, function(data)
+                        {
+                            if(data=='yes') 
+                            {
+                                $("#msgbox").fadeTo(200, 0.1, function()  
+                                {
+                                    $(this).html('Успешно!').addClass('messageboxok').fadeTo(900, 1,
+                                    function()
+                                    {
+                                        document.location='showpost0ba7.html?groupid=4&amp;catid=9&amp;postid=1516&amp;page=1';
+                                    });
+
+                                });
+                            } else
+                            {
+                                $("#msgbox").fadeTo(200, 0.1, function() 
+                                {
+                                    $(this).html('Грешна парола/потребител').addClass('messageboxerror').fadeTo(900, 1);
+                                });
+                            }
+
+                        });
+                        return false; 
+                    });
+                    $("#submit").click(function()
+                    {
+                        $("#login_form").trigger('submit');
+                    });
+                });
+            </script>
+            <div class="modal" id="prompt" style="height: 230px;"> 
+                <form method="post" action="#" id="login_form"> 
+                    <h4>Потребител:</h4>
+                    <input name="username" type="text" id="username" value="" /> 
+                    <h4>Парола:</h4>
+                    <input name="password" type="password" id="password" value="" /><br/>
+                    <input type="checkbox" checked="checked" id="remember" name="remember" value="1"/><span>Запомни ме!</span>
+					<div style="margin-top: -3px;"><a href="../registration.html#forgotten_password">Забравена парола?</a></div>
+                    <input href="#" name="Submit" type="submit" id="submit"  /> <span id="msgbox" style="display:none; margin-left: 0px;"></span>
+                </form> 
+                <br /> 
+
+            </div> 
+            <script> 
+                $(document).ready(function() {
+                    var triggers = $(".modalInput").overlay({
+                        mask: {
+                            color: '#000',
+                            loadSpeed: 200,
+                            opacity: 0.7
+                        },
+                        closeOnClick: true
+                    });
+                });
+            </script> 
+			            <div class="forum_login"><a href="../registration.html" id="registracia">Регистрация</a> <a href="#" class="modalInput" rel="#prompt" id="vhod" style="padding-right: 32px;">Вход</a> </div>
+			            
+   <!-- УСПЕШНА РЕГИСТРАЦИЯ -->         
+   <!-- УСПЕШНА РЕГИСТРАЦИЯ END -->
+              
+		
+                </div>
+<style type="text/css">
+	#searchbox { margin-bottom: 0px; }
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#search_trigger").click(function() {
+		  $(".first_pagination").hide("fast");
+		});
+	});
+	</script>
+	
+<link rel="stylesheet" href="../css/no-theme/jquery-ui-1.9.1.custom.css" type="text/css">
+<script src="../js/jquery-ui-1.9.1.custom.min.js" type="text/javascript"></script>
+<div id="searchbox" style="display: none;">
+	<div class="srchfon">
+		<form action="https://www.d3bg.org/forum/search.php" method="post">
+			<div class="srchtabs"></div>
+			<div id="rad1" onclick="highlightLink(this);" class="rad" style="width: 49px; height: 14px; position: absolute; margin: 15px 0 0 160px; padding: 2px; text-align: center;"><label title="Търсете по заглавието на темата" onmouseover="Tip('Търсете по заглавието на темата')" onmouseout="UnTip();" style="cursor: pointer;"><input type="radio" name="option" value="title" class="title_acs" style="display: none;" checked="checked" />Заглавие</label></div>
+			<div id="rad" onclick="highlightLink(this); document.getElementById('rad1').className = 'nonrad';" style="width: 29px; height: 14px; position: absolute; margin: 15px 0 0 219px; padding: 2px; text-align: center;"><label title="Търсете по съдържанието (първия пост) от темата" onmouseover="Tip('Търсете по съдържанието (първия пост) от темата')" onmouseout="UnTip();" style="cursor: pointer;"><input type="radio" name="option" value="content" class="title_ach" style="display: none;" />Тема</label></div>
+			<div id="rad" onclick="highlightLink(this); document.getElementById('rad1').className = 'nonrad';" style="width: 42px; height: 14px; position: absolute; margin: 15px 0 0 259px; padding: 2px; text-align: center;"><label title="Търсете във всички отговори/коментари към темата" onmouseover="Tip('Търсете във всички отговори/коментари към темата')" onmouseout="UnTip();" style="cursor: pointer;"><input type="radio" name="option" class="title_ach" value="inreply" style="display: none;" />Мнения</label></div>
+			<div id="rad" onclick="highlightLink(this); document.getElementById('rad1').className = 'nonrad';" style="width: 41px; height: 14px; position: absolute; margin: 15px 0 0 312px; padding: 2px; text-align: center;"><label title="Търсете тема по автор" onmouseover="Tip('Търсете тема по автор')" onmouseout="UnTip();" style="cursor: pointer;"><input type="radio" name="option" value="byauthor" class="title_ach" style="display: none;" />Автор</label></div><br />
+			<input type="text" name="keyword" id="srchpole" placeholder="Търсене ...">
+			<input type="submit" name="search" value="" class="srchbuton">
+		</form>
+	</div>
+</div>	
+<script type="text/javascript">
+$(document).ready(function(){
+	$("ul.forum_tabs").tabs("> .tabspane");
+
+	$('.title_acs').click(function(){
+		$('.ui-autocomplete').css({"visibility":"visible"});
+	});
+	$('.title_ach').click(function(){
+		$('.ui-autocomplete').css({"visibility":"hidden"});
+	});
+		$(function(){
+			$( "#srchpole" ).autocomplete({
+				source: "instant_search_topic.php",
+				minLength: 5,
+				focus: function( event, ui ) {
+					$( "#srchpole" ).val( ui.item.label );
+					return false;
+				},
+				select: function( event, ui ) {
+					//$( "#srchpole" ).val( ui.item.label );
+					window.location.href = ui.item.link;
+					return false;
+				}
+			});
+		});
+});
+
+var highlightLink = function () {
+        var active = null;
+        if (this.attachEvent) this.attachEvent('onunload', function () {
+            active = null;
+        });
+        return function (element) {
+            if ((active != element) && element.style) {
+                if (active) active.className = '';
+                element.className = 'rad';
+                active = element;
+            }
+        };
+    }();
+</script>
+            
+<div style="position: inherit; float: right;">
+	<div style="bottom: 0; position: fixed; cursor: pointer; display: none; z-index: 999; margin-bottom: 20px; margin-left: 0px;" class="scrolltoTop"><img src="../img/jquery_scroll_icon.png" alt="Top" title="Нагоре" style="width: 28px; height: 38px;" /></div>
+</div><script type="text/javascript">
+var highlightLink = function () {
+	var active = null;
+	if (this.attachEvent) this.attachEvent('onunload', function () {
+		active = null;
+	});
+	return function (element) {
+		if ((active != element) && element.style) {
+			if (active) active.className = '';
+			element.className = 'rad';
+			active = element;
+		}
+	};
+}();
+</script>
+<div id="myModal" class="modal2">
+  <div class="modal-content">
+    <div class="modal_close">×</div>
+    <p id="modal_p"><iframe src="../modal_default.html" width="598px" height="255px" frameborder="0" id="modal_iframe" scrolling="no" style="overflow: hidden;background: #000000;"></iframe></p>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	var modal = document.getElementById('myModal');
+	$(".openModal").click(function(){
+		$(".modal2").show();
+	});
+	$(".modal_close").click(function(){
+		$(".modal2").hide();
+		$("#modal_iframe").attr('src', '../modal_default.html');
+	});
+	$(document).click(function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+			$("#modal_iframe").attr('src', '../modal_default.html');
+		}
+	});
+});
+</script>	
+
+<div class="forum_bg2">
+                    <div class="forum_head2">
+                        <h3>Активни</h3><h2><a href="index452d.html?groupid=4">Новини</a> <span style="color:#b39e79;">[</span> <a style="font-size:18px;" href="showcat6ed9.html?groupid=4&amp;catid=9">Новини за Diablo III</a> <span style="color:#b39e79;">]</h2></div>
+					        <div id="tooltip337" class="tooltip">
+        <div class="tooltip_body">
+            <div style="float: left;">
+            <div class="avatar_frame">&nbsp;</div>
+            <img class="avatar" src="../img/forum/avatars/avatar_t1_10e08.jpg?cc=1735860643" style="width: 112px; height: 112px;" class="comming_soon" alt="" />
+<h3 class="status_offline">Офлайн</h3>            </div>
+            <div class="user_tooltip_links">
+                <h3><a href="https://www.d3bg.org/showuser.php?userid=337">Dex</a></h3>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/showuser.php?userid=337">Профил</a><br/>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=337" >Лично съобщение</a><br/>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                Коментари: <strong style="color: #b26400;">3568</strong>
+
+            </div>
+        </div>
+        <div class="tooltip_tail">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".username337").tooltip({events: {def: "click,mouseout"},tip: '#tooltip337', effect: 'slide', delay: 1000});
+        });
+    </script>
+    
+                                      
+                <div class="forum_cat2">
+                        <table class="forum_table light_table">
+                            <tr>
+                                <td valign="top" width="85" style="padding: 7px 6px 7px 8px;">
+                                    <strong style="margin: 0 0 0 5px;"><a style="color: #b26400 !important;" href="https://www.d3bg.org/showuser.php?userid=337">Dex</a></strong>
+                                    <div style="clear:both;"> </div>
+                                    <img class="forum_status_tag" src="../img/forum/offline_tag.png" />                                    <div class="avatar_frame_small">&nbsp;</div>
+                                    <img class="avatar" style="width: 90px;margin: 0px 0 -95px -2px;top:-118px" src="../img/forum/avatars/avatar_t1_10e08.jpg?cc=1735860643"  width="90px" height="90px" class="comming_soon" alt="" />
+									                                    <p class="forum_user_desc"><div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                     									</div>
+									<div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                    <img src="../img/cross_bullet_lvl2.png" onmouseover="Tip('Репутация: 2546')" onmouseout="UnTip();" /><img src="../img/cross_bullet_lvl2.png" onmouseover="Tip('Репутация: 2546')" onmouseout="UnTip();" /><br />                                    <span onmouseover="Tip('Коментари')" onmouseout="UnTip();"><i class="far fa-comment"></i> <strong>3568</strong></span>
+									 | 
+									<span onmouseover="Tip('Репутация')" onmouseout="UnTip();"><i class="fas fa-thumbs-up"></i> <strong>2546</strong><br /></span>
+                                    									</div>
+                                    									<a class="btag_icon_invalid" onmouseover="Tip('Батъл тага липсва или е невалиден')" onmouseout="UnTip();">battle tag</a>                                    <a href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=337" class="pm_icon" onmouseover="Tip('Изпрати лично съобщение на Dex')" onmouseout="UnTip();">battle tag</a>
+																		<div style="text-align: center; padding-top: 40px;">
+																		</div>
+                                    </p>
+                                                                    </td>
+                                <td valign="top" width="681" class="forum_cat_content">
+                                    <h3><a href="showpostd953.html?groupid=4&amp;catid=9&amp;postid=1516">Developer Journal: Crowd Control Changes</a></h3>
+<div style="width: 110px; text-align: right; margin-top: 7px; font-size: 14px; margin: -9px 75px 0 0px; float: right;">
+	<script type="text/javascript">
+	$(function() {
+		$(".sum").click(function (){
+			var type = 1;
+			var object = 1516;
+			var author = 337;
+			$(".sum_loading").show();
+			$(".sum").css({"opacity": "0"});
+			$.ajax({
+				url: "addvote.php",
+				type: "POST",
+				data: "type=" + type + "&object=" + object + "&author=" + author,
+				success: function (){
+					$(".sum_loading").hide();
+					var sum = 0;
+					var newsum = sum + 1;
+					$(".sum").css({"-webkit-filter": "saturate(0)"});
+					$(".sum").css({"filter": "saturate(0)"});
+					$(".sum").css({"opacity": "1"});
+					
+				}, 
+			});
+			return false;
+		});
+	});
+	</script></div><div class="forum_post_options"><div class="forum_post_vote_up_text" id="sumres">0</div></div>
+								           <div id="tooltip337" class="tooltip">
+        <div class="tooltip_body">
+            <div style="float: left;">
+            <div class="avatar_frame">&nbsp;</div>
+            <img class="avatar" src="../img/forum/avatars/avatar_t1_10e08.jpg?cc=1735860643" style="width: 112px; height: 112px;" class="comming_soon" alt="" />
+<h3 class="status_offline">Офлайн</h3>            </div>
+            <div class="user_tooltip_links">
+                <h3><a href="https://www.d3bg.org/showuser.php?userid=337">Dex</a></h3>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/showuser.php?userid=337">Профил</a><br/>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=337" >Лично съобщение</a><br/>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                Коментари: <strong style="color: #b26400;">3568</strong>
+
+            </div>
+        </div>
+        <div class="tooltip_tail">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".username337").tooltip({events: {def: "click,mouseout"},tip: '#tooltip337', effect: 'slide', delay: 1000});
+        });
+    </script>
+    
+   <p><strong style="color: #D6D1C4;">Автор:</strong> <a class="username337" >Dex</a> на 17/09/2012 - 20:04ч. <span style="font-size: 11px;color: gray;">| <i class="fas fa-pencil-alt" aria-hidden="true"></i> <a class="username337">Dex</a> на 17/09/2012 - 20:16ч.</span></p><div class="hr_forum">&nbsp;</div><div style="margin: 10px 0 0 0px;width:681;" class="post_container" onmouseup="quick_quote('name=Dex date=17/09/2012 - 20:04ч.', event);">
+<div class="bbcode_center" style="text-align:center">
+<a class="lightbox" href="http://bnetcmseu-a.akamaihd.net/cms/blog_header/6CWKZQCU7LX41346400460848.jpg" rel="image-group"><img class="reply_img" loading="lazy" src="http://bnetcmseu-a.akamaihd.net/cms/blog_header/6CWKZQCU7LX41346400460848.jpg" alt="6CWKZQCU7LX41346400460848.jpg" class="bbcode_img" /></a>
+</div>
+<br />
+<span style="font-family:'tahoma'">Wyatt Cheng написа:<br />
+<br />
+Скоро след пускането на Diablo III , си спомнян че гледах Jay (Jay Wilson) да играе с неговия barbarian. Той убиваше и правеше на парчета, всички чудовища по пътя си. Но имаше нещо което го притесняваше. Той беше раздразнен заради Ground Stomp-а - едно от неговите любими умения, което ставаше все по-слабо и по-слабо с напрадване на играта и това че неговия герой се усещаше по-слаб, независимо от по-добрата екипировка и повчето повечето точки сила (strength stat points).<br />
+<br />
+Всички ние бяхме съгласни, че играта трябваше да става по-трудна на по-високите степени, но Jay не харесваше начина по който тя ставаше по-трудна. По-конкретно, не харесваше че намалявахме crowd control (CC) ефектите. Много пъти сме обсъждали CC ефектите по време на разработката на играта и смятахме, че системата която сме направили се справя добре, но Jay смяташе, че можем да се справи и по-добре.<br />
+<br />
+Преди играта да излезе, направихме така, че продължителността на CC уменията да намалява на по-всоките трудности - за пример на повечето CC умения, ефективността на Hell и Inferno е редуцирана с 65%. Jay никога не е бил фен на това как Ground Stomp и други CC умения стават по-слаби, в резултат на отслабващия ефект, но той също така знаеше, че таква система е нужда, за да може по-високите степени на трудност да са по-голямо предизвикателство за играчите. От известно време насам се каним на направим промени по CC системата, но имахме по-приоиртетни задачи (като добавянето на Paragon системата и подобряването на легендарните предмети), затова я оставихме за някои бъдещ пач.<br />
+<br />
+Да превъртим лентата до днес, когато се подготвяме за пач 1.0.5. Преди да ви разкажа, какво ще направим за да подобрим CC уменията, без това да влияе на трудността на играта, нека минем през някои от причините поради които намаляваме ефектите на CC в Diablo III:<br />
+<br />
+- Чудовищата се нуждаят от време, за да могат да направят нужното, за да ви нападнат.<br />
+<br />
+- Безкрайните CC ротации са яки, но ако CC стане твърде силен, може да се получи така, че някои от основните механики да се тривиализиат и играта да стане скучна.<br />
+<br />
+- Играчите в кооперативна игра, имат потенциала да синхронизират CC.<br />
+<br />
+- С намаляването на CC се проявават и странични ефекти. Един от най-големите проблеми, които имахме, когато става дума за смекчаване на щетие, които героят поема е, че CC уменията не са достатъчно ефективни с наредването на играта.<br />
+Например умението Ground Stomp което намалява щетите които поемате, като зашеметява враговете ви на бойното поле става много по-малко ефективно с напредването на играта. Ignore Pain от друга страна редуцира щетите които поемате, независимо от степеннта на трудност.<br />
+<br />
+Графиките по-долу са нагледен пример, за това как CC уменията стават по-малко използвани от играчите при нива 25, 45 и 59<br />
+(нивата на които се очаква да сте на ACT III на Normal, АCT III Nightmare и ACT III Hell).</span><br />
+
+<div class="bbcode_center" style="text-align:center">
+<a class="lightbox" href="https://lh5.googleusercontent.com/-dEQyIHhH1Y0/UFdZG0cikTI/AAAAAAAAAVg/L1DByzlnNWg/s622/1.jpg" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh5.googleusercontent.com/-dEQyIHhH1Y0/UFdZG0cikTI/AAAAAAAAAVg/L1DByzlnNWg/s622/1.jpg" alt="1.jpg" class="bbcode_img" /></a> <a class="lightbox" href="https://lh6.googleusercontent.com/-ZJhZvAtHHoc/UFdZQBgm4DI/AAAAAAAAAVo/9sxK4tlW12I/s622/2.jpg" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh6.googleusercontent.com/-ZJhZvAtHHoc/UFdZQBgm4DI/AAAAAAAAAVo/9sxK4tlW12I/s622/2.jpg" alt="2.jpg" class="bbcode_img" /></a> <a class="lightbox" href="https://lh3.googleusercontent.com/-J_iNZzMNeYU/UFdZRcEy3xI/AAAAAAAAAVw/fkrk8OTKZxo/s622/3.jpg" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh3.googleusercontent.com/-J_iNZzMNeYU/UFdZRcEy3xI/AAAAAAAAAVw/fkrk8OTKZxo/s622/3.jpg" alt="3.jpg" class="bbcode_img" /></a>
+</div>
+<span style="font-family:'tahoma'"><br />
+Не е изненада, че щом ефективността на CC умението започва да намалява, нейната относителна стойност (особенно сравнена с умения които сами се подобряват (self-buffs)) също започва да намалява. Това освен че ви кара да се чувствате по-слаби като играчи, прави така, че да се ориентирате към по-тесен кръг от магии. В крайна сметка се получава така, че магия която отслабва във времето спира да се използва, а тази която не отслабва, се вижда в почти всеки build (логично).</span><br />
+
+<div class="bbcode_center" style="text-align:center">
+<a class="lightbox" href="https://lh4.googleusercontent.com/-PVL_VGnqqJU/UFdZSmJCRGI/AAAAAAAAAV4/wDBIKMaA1VI/s580/4.jpg" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh4.googleusercontent.com/-PVL_VGnqqJU/UFdZSmJCRGI/AAAAAAAAAV4/wDBIKMaA1VI/s580/4.jpg" alt="4.jpg" class="bbcode_img" /></a>
+</div>
+<span style="font-family:'tahoma'"><br />
+Смятаме че, CC системата е не само тактически ценна, но и наистина забавно нещо. Нашата цел е това чувство да се възвърне и при по-високите степени на трудност. Искахме играчите да се чувстват по-силни и героични при използване на CC уменията си, независимо кое ниво се намират и излязохме с няколко идеи как да се постигне това.</span><br />
+
+<div class="bbcode_center" style="text-align:center">
+<a class="lightbox" href="https://lh4.googleusercontent.com/-_fA5UkFGRVs/UFdZTsHu1AI/AAAAAAAAAWA/vWHlRizJMog/s354/5.png" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh4.googleusercontent.com/-_fA5UkFGRVs/UFdZTsHu1AI/AAAAAAAAAWA/vWHlRizJMog/s354/5.png" alt="5.png" class="bbcode_img" /></a>
+</div>
+<span style="font-family:'tahoma'"><br />
+<b><span style="color:white">Идея 1: Намаляване на продължиелността на CC ефектите в кооперативна игра (Reduce the Duration of CC effects in Co-Op Games</span>)</b><br />
+<br />
+Първото решение до което стигнахме е да се намали продължителността на CC ефектите само в кооперативна игра, а при самостоятелна игра CC уменията да могат да се ползват напълно пълноценно. Въпреки, че това ще осигури страхото преживяване при соловата игра и ще помгне да се намалят безкрайните CC ротации в кооперативна игра, очевиднят недостатък е, че CC уменията все пак ще се чувстват слаби в кооперативна игра. Вече има няколко механики (например 'on kill trigger') които обезсърчават играчите и ги карат да не искат да играят заедно, а ние не искаме 'CC ми е по-малко ефективен' да е още една причина хората да избягват кооперативнта игра. Така че, тази идея отпадна и се върнахме на чертожната дъска.<br />
+<br />
+<b><span style="color:white">Идея 2: Ефекта на отслабвае да не е толкова силен (Make Diminishing Effects Not as Strong)</span></b><br />
+<br />
+Обсъдихме идеята да направим всички CC ефекти по-кратки от най-ниската трудност, но да не ги правим по-слаби с напредване на играта (това да се прилага едновременно и за single и за multyplayer). Например, говорихме да направим Ground Stomp винаги да трае 2 секунди, дори когато я получите за първи път. Да не е толкова добра отначало, но поне не се влошава с напредване на играта. Да това означава, че ще трябва да направим всички CC умения по-слаби. Това решава проблема с усещането че CC отслабват с времето, но създава нов проблем &quot;CC уменията ми не са достатъчно силни&quot;, което може би по-лошо.<br />
+<br />
+<b><span style="color:white">Идея 3: Намаляваща възвърщаемост (Diminishing Returns)</span></b><br />
+<br />
+Друга идея, която обмисляхме е да въведем системата &quot;Diminishing Returns&quot; от World of Warcraft:първият ви удар има пълна продължителност, вторият удар е 'орязан' наполовина, третият с 75%,а четвъртият и следващите ще бъдат последвани от надписа &quot;IMMUNE&quot; (имунизиран). Въпреки, че това работи добре в WoW, някак не изглежда подходящо за Diablo III. Не само, че ще изглежда странно когато ви изпише &quot;IMMUNE&quot;, но също така ще ви лимитира в кооперативна игра, когато редът по който вие и съотборника ви използвате CC уменията, там където те са от изключително важно значение. Да кажем, че вие имате 5 секунден stun, а партньора ви има 1.5 секунден стън. Ако вие нападнете първи чудовищете ще е зашеметено за 5 + 0.75 секунди = 5.75 секунди общо. Ако партньора ви започне първи, чудовището ще бъде зашеметено за 1.5 + 2.5 секунди = 4 секунди общо. Редът по който зашеметяването бъде приложено води до разлика от 1.75 секунди. Цялото това нещо е твърде сложно и определено е по-тромаво от това което искаме да направим в бърза екшън игра като Diablo III. Допълнително, в момента има няколко CC метода, които са много силни.Например някои Wizard и Monk build-ве могат да поддържат изкл. висок CC ефект върху чудовищата. Докато разглеждахме CC системата осъзнахме, че искаме да направим CC уменията да се усещат добре сами по себе си, но да оставим текущите build-ве и комбинации да бъдат ефективни. Ние искаме да buff-нем основните умения, без това да навреди на играчите, които са разбрали някои от най-мощните комбинации. Това е още една причина поради която не искаме да заимстваме Diminishing Returns системата от WoW.</span><br />
+
+<div class="bbcode_center" style="text-align:center">
+<a class="lightbox" href="https://lh4.googleusercontent.com/-uyWfJz4PaRI/UFdZU_pxDPI/AAAAAAAAAWI/SnP7LVN-rFU/s354/6.png" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh4.googleusercontent.com/-uyWfJz4PaRI/UFdZU_pxDPI/AAAAAAAAAWI/SnP7LVN-rFU/s354/6.png" alt="6.png" class="bbcode_img" /></a>
+</div>
+<span style="font-family:'tahoma'"><br />
+Както можете да видите, всяко едно от решенията, които обсъдихме досега има недостатък, а ние не искаме да има такъв. Отидохме с решенията при Jay и той ни каза &quot;Знам защо редуцираме продължителността, но все още не ми харесва. Продължете да работите по казуса.&quot;</span><br />
+
+<div class="bbcode_center" style="text-align:center">
+<a class="lightbox" href="https://lh6.googleusercontent.com/-m5zt1y7hS_0/UFdZWUQxX_I/AAAAAAAAAWQ/ObZJ-ZKKAdw/s580/7.jpg" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh6.googleusercontent.com/-m5zt1y7hS_0/UFdZWUQxX_I/AAAAAAAAAWQ/ObZJ-ZKKAdw/s580/7.jpg" alt="7.jpg" class="bbcode_img" /></a>
+</div>
+<span style="font-family:'tahoma'"><br />
+Когато започнахме да приключваме с разработката на 1.0.4, реших да получа някоя свежа идея около CC ситуацията и се срещнатх с някои от дизайнерите на World of Warcraft и StarCraft II. Едно от най-хубавите неща от това да работиш в Blizzard е възможността да се запознаеш с креативността на останалите development тиймове и да надникнеш в техните идеи, като едновременно с това си способен да направиш това което е най-доброто за Diablo франчайз-а. Въпреки, че те работят по различни игри, много от дизайнерите в компанията са играли доста Diablo III, и аз реших, че те ще бъдат в състояние да ми предложат някои по-задълбочени идеи над това което мислеха че работи и това което не. След като нахвърляхме няколко идеи, изведнъж получихме прозрение: Какво ще стане ако използваме &quot;diminishing returns&quot; системата, но разработим различни правила за Diablo III? Какво ще стане, ако чудовищата никога не могат да се имунизират? И какво, ако вместо редуцирани % продължителност, продължителността бъде редуцирана на базата на дължината на CC, така, че да не е от значение в какъв ред ще бъдат приложени CC ефектите върху чудовищата докато играем кооперативно?<br />
+<br />
+В крайна сметка, ето я системата до която достигнахме:<br />
+<br />
+<b><span style="color:white">Как тя работи:</span></b><br />
+<br />
+Всяко чудовище си има свой собствен CC resistance.<br />
+CC resistance-а стартира на 0%. За всяка секунда в която CC е приложена на чудовището, то получава 10% CC Resistance.<br />
+За всяка секунда в която на чудовището не е приложен CC, то губи 10% от своя CC Resistance.<br />
+Елитните чудовища ще запазят своите resistance-и както са в момента, като те са:<br />
+<br />
+35% на Normal<br />
+50% на Nightmare<br />
+65% на Hell<br />
+65% на Inferno<br />
+<br />
+<b><span style="color:white">Какво означава това за играчите:</span></b><br />
+<br />
+При високите нива, намаляващата възвърщаемост се прилага на последователните зашеметяващи удари за да намали тяхната ефективност.<br />
+Никога няма да получие съобщение &quot;IMMUNE&quot; поради начина на работа на намаляващата възвърщаемост.<br />
+Намаляващата възвърщаемост при елитните чудовища, ще бъде със същите стойности, каквито в момента се прилагат при редуцирането на щетите на елитните чудовища.<br />
+Както вече споменахме, че текущите почти безкрайни CC стратегии ще работят. Ние сме ок с тях, и ни харесва колко по-силни се чувстват играчите когато ги ползват.<br />
+(Имайте предвид, че следим тези неща (whirlwind build-а за варварина, Critical Mass build-а за магьосника и тн.) и е възможно да направим промени по тях, ако сметнем, че така е по-добре)<br />
+Редът в който се пускат магиите в кооперативна игра, няма да има толкова голямо значение и няма да го има чувството, че сте прецакани заради това, че другия не е изчаквал първо вие да пуснете магията, а след това той.<br />
+Играчите ползващи CC от време на време, а не постоянно, ще се възползват от целия потенциал на CC при всички степени на трудност.</span><br />
+
+<div class="bbcode_center" style="text-align:center">
+<a class="lightbox" href="https://lh3.googleusercontent.com/-VwCvEkVeNz0/UFdZXSbCuMI/AAAAAAAAAWY/LQ2QpOroDPE/s580/8.jpg" rel="image-group"><img class="reply_img" loading="lazy" src="https://lh3.googleusercontent.com/-VwCvEkVeNz0/UFdZXSbCuMI/AAAAAAAAAWY/LQ2QpOroDPE/s580/8.jpg" alt="8.jpg" class="bbcode_img" /></a>
+</div>
+<span style="font-family:'tahoma'"><br />
+Нека ви дадем няколко примера, за да видте как ще работи новата система в реални условия:<br />
+<br />
+<b><span style="color:white">Пример 1:</span></b><br />
+<br />
+Wizard който замразява елитно чудовище на Inferno трудност за три секудни с Frost Nova. Чудовището ще е замразено за всичките 3 секудни, но вече ще има 30% CC resistance<br />
+(+10% resistance за всяка една секунда = 30% CC resistance). В момета в който изтекат 3-те секудни, Witch Doctor пуска магията Horrify, която по-приницп плаши чудовището за 4 секунди, но тъй като чудовището вече има 30% CC resistance, то ще бъде изплашено за 2.8 секудни ( тъй като 70% от 4 секудни = 2.8 секунди, защото чудовището има 30% CC resistance ). Чудовището вече има 58.4% CC resistance (30% от първата магия и и още 28.4% от втората). След като изтекат 5.84 секунди (общата продължителност на двете магии), чудовището вече не се намира под CC. Да предположим, че нищо не се случва в продължение на 5 секудни. През това време чудовището губи 50% от първоначалните 58.4% и остава със 8.4% CC resistance. Някои Monk пуска Blinding Flash, което по-принип прави чудовището зашеметено (невиждащо) за 3 секудни. В тази ситуация чудовището ще бъде зашеметено за 2.75 секудни (заради това, че вече има 8.4% CC resistance) и чудовището вече има 35.9 % CC resistance.<br />
+<br />
+<b><span style="color:white">Пример 2:</span></b><br />
+<br />
+Monk ползващ Pandemonium руна пуска Seven-Sided Strike върху дадено чудовище на Nightmare трудност, което по-принцип го зашеметява за 7 секудни.<br />
+Първият удар от магията зашеметява чудовището за 7 секунди, но също така му добавя 70% CC resistance.<br />
+Вторият удар, който следва е след 0.4 секунди, който също зашеметява чудовището. Тъй като обаче играта е на Nightmare трудност, тези 70% CC resistance са намалени до 50%, което е максиламната стойност (cap) за Nightmare трудност, така че зашеметяването ще трае 3.5 секудни а не 7. 3.5 секундното зашеметяване ще влезе в сила, макар да е излишен с оглед на това, че чудовището вече е зашеметено за 7 секудни. Тъй като зашеметяването при вторият удар е по-късо, отколкото оставащото зашеметяване от първия удар, не се добавят нови CC resistance към съществуващите. На практика второто зашеметяване, няма никакъв ефект.<br />
+<br />
+<b><span style="color:white">Пример 3:</span></b><br />
+<br />
+Четири Monk-а се опитват да зашеметят (по-точно stun-lock) елитно чудовище на Inferno трудност. Всички те използват Blinding Flash с Self-Reflection руна, което по-приницп зашеметява (заслепява) чудовището за 4 секудни. Първият Monk пуска магията и зашеметява чудовището за 4 секудни, но му добавя и 40% CC resistance.<br />
+Вторият Monk също пуска магията, точно преди да изтече първата (докато чудовщието все още има 40% CC resistance), тя ще трае 2.4 секудни и ще вдигне CC resistance-а на чудовището до 64%. Сбора от двете ще изтече след 6.4 секудни. Третият Monk пуска магията веднага след като минат тези 6.4 секудни, като нейната продължителност ще е 1.44 секудни и това прави общ сбор от 78.4% CC resistance. Точно преди да изтекат 7.84 секудни, в битката се включва и четвъртият Monk ( този път от женски род <img src="smileys/smile.gif" width="16" height="16" alt=":)" title=":)" class="bbcode_smiley" align="center" style="border: none;" /> ), тя пуска своята Blinding Flash. Въреки че, технически CC resistance-а би трябвало да е 78.4% до момента, в действителност той е 65% тъй като това е максималната стойност (cap-a) на Inferno трудност. Така че, 4 секундното зашеметяване всъщност ще трае 1,4 секудни, като това покачва CC resistance-те до 92.4% (ефективните са 65%, но 92.4% се отбелязват в системата, за да може да се вземе предвид времето за което ще изтече зашеметяването (9.24 секудни)). В момента чудовището е заслепено за общо 9.24 секудни, а четрите Monk-a все още не могат да пуснат магията отново, защото те все още не е готова за ползване, тъй като тя има време за зареждане от 15 секудни. Изминали са 9.24 секунди и остават още 5.76 докато могат да пуснат магията отново. През това време чудовището губи 57.6% от своите CC resistance, оставяйки с 34.8%. Първият Monk пуска магията пак почти веднага след като тя се презареди. 4 секундното зашеметяване сега е редуцирано до 2.61 секудни (4*(100%-34.8%) = 2.61) секунди, и това връща CC resistance-а на чудовището до 60.9%.<br />
+<br />
+<b><span style="color:white">Пример 4:</span></b><br />
+<br />
+Сценарии 1:<br />
+<br />
+Първият играч зашеметява чудовишето за 1 секудна (1 секундно зашеметяване) от което чудовището става с 10% CC resistance.<br />
+Вторият игра зашеметява чудовището за 5.4 секунди (6 секундно зашеметяване) от което чудовището става с 64% CC resistance.<br />
+<br />
+Сценарии 2:<br />
+<br />
+Първият играч зашеметява чудовището за 6 секунди (6 секундно зашеметяване) от което чудовището става с 60% CC resistance.<br />
+Вторият играч зашеметява чудовището за 0.4 секунди (1 секундно зашеметяване) от което чудовището става с 64% CC resistance.<br />
+<br />
+(Сценарии 1 и 2 показват, че тази система позволява CC ефектите да се прилагат в произволен ред. И в двата случая, общата продължителност на зашеметяването е 6.4 секунди.<br />
+<br />
+Смятаме, че тези промени ще направят CC уменията много по-привлекателни (особенно на по-трудните степени) и сме ги планирали за пач 1.0.5. Докато пача все още е далеч, междувременно експериметирайте, задавайте ни въпроси, за това как новата система ще работи и споделяйте вашите отзиви.</span>                                </td>
+                            </tr>
+                        </table>
+                        <div class="problem_divider">&nbsp;</div>
+                    </div>
+                                    <div class="forum_cat2">
+                        <table class="forum_table dark_table">
+                            <tr>
+                                <td valign="top" width="85" style="padding: 7px 6px 7px 8px;">
+                                    <strong style="margin: 0 0 0 5px;"><a style="color: #b26400;" href="https://www.d3bg.org/showuser.php?userid=337">Dex</a></strong>
+                                    <div style="clear:both;"> </div>
+                                    <img class="forum_status_tag" src="../img/forum/offline_tag.png" />                                    <div class="avatar_frame_small" title="Регистриран на: 20/04/2012">&nbsp;</div>
+                                    <img class="avatar" style="width: 90px;margin: 0px 0 -95px -2px;top:-118px" src="../img/forum/avatars/avatar_t1_10e08.jpg?cc=1735860643"  width="90px" height="90px" class="comming_soon" alt="" />
+									                                    <p class="forum_user_desc"><div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                     									</div>
+									<div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                    <img src="../img/cross_bullet_lvl2.png" onmouseover="Tip('Репутация: 2546')" onmouseout="UnTip();" /><img src="../img/cross_bullet_lvl2.png" onmouseover="Tip('Репутация: 2546')" onmouseout="UnTip();" /><br />                                    <span onmouseover="Tip('Коментари')" onmouseout="UnTip();"><i class="far fa-comment"></i> <strong>3568</strong></span>
+									 | 
+									<span onmouseover="Tip('Репутация')" onmouseout="UnTip();"><i class="fas fa-thumbs-up"></i> <strong>2546</strong><br /></span>
+                                    									</div>
+                                    									<a class="btag_icon_invalid" onmouseover="Tip('Батъл тага липсва или е невалиден')" onmouseout="UnTip();">battle tag</a>                                    <a href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=337" class="pm_icon" onmouseover="Tip('Изпрати лично съобщение на Dex')" onmouseout="UnTip();">battle tag</a>
+																		<div style="text-align: center; padding-top: 40px;">
+																		</div>
+                                    </p>
+									                                </td>
+                                
+                                <td valign="top" width="681" class="forum_cat_content">
+<div style="width: 110px; text-align: right; margin-top: 7px; font-size: 14px; margin: 11px 75px 0 0px; float: right;">
+
+	<script type="text/javascript">
+	$(function() {
+		$(".sumr_20476").click(function (){
+			var type = 2;
+			var object = 20476;
+			var author = 337;
+			$(".sumr_loading_20476").show();
+			$(".sumr_20476").css({"opacity": "0"});
+			$.ajax({
+				url: "addvote.php",
+				type: "POST",
+				data: "type=" + type + "&object=" + object + "&author=" + author,
+				success: function (){
+					$(".sumr_loading_20476").hide();
+					var sumr_20476 = 0;
+					var newsumr_20476 = sumr_20476 + 1;
+					$(".sumr_20476").css({"-webkit-filter": "saturate(0)"});
+					$(".sumr_20476").css({"filter": "saturate(0)"});
+					$(".sumr_20476").css({"opacity": "1"});
+					
+				}, 
+			});
+			return false;
+		});
+	});
+	</script></div><div class="forum_post_options_reply"><div class="forum_post_vote_up_text"  id="sumresr_20476">0</div></div>                                    <h3><span style="color: #D6D1C4;"># 1:</span> <a name="reply20476" href="showpost0ba7.html?groupid=4&amp;catid=9&amp;postid=1516&amp;page=1#reply20476">Developer Journal: Crowd Control Changes</a></h3>
+                                            <div id="tooltip337" class="tooltip">
+        <div class="tooltip_body">
+            <div style="float: left;">
+            <div class="avatar_frame">&nbsp;</div>
+            <img class="avatar" src="../img/forum/avatars/avatar_t1_10e08.jpg?cc=1735860643" style="width: 112px; height: 112px;" class="comming_soon" alt="" />
+<h3 class="status_offline">Офлайн</h3>            </div>
+            <div class="user_tooltip_links">
+                <h3><a href="https://www.d3bg.org/showuser.php?userid=337">Dex</a></h3>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/showuser.php?userid=337">Профил</a><br/>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=337" >Лично съобщение</a><br/>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                Коментари: <strong style="color: #b26400;">3568</strong>
+
+            </div>
+        </div>
+        <div class="tooltip_tail">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".username337").tooltip({events: {def: "click,mouseout"},tip: '#tooltip337', effect: 'slide', delay: 1000});
+        });
+    </script>
+    
+   <p><strong style="color: #D6D1C4;">Автор:</strong> <a class="username337" >Dex</a> на 17/09/2012 - 20:29ч. </p><div class="hr_forum">&nbsp;</div><div style="margin: 10px 0 0 0px;width:681px;" class="post_container" onmouseup="quick_quote('name=Dex date=17/09/2012 - 20:29ч.', event);"><span style="font-family:'tahoma'">С малко закъснение (не толкова малко, ако се вземе предвид, преди колко време е постнато от Blizzard) ето я обещаната статия. Искам да отбележа няколко неща: тъй като съм го превеждал на парчета (някои по-големи, някои по-малки) и някои от тях в по-късните часове на денонощието в старията могат да се наблюдават дефекти от типа: 'граматически и правописни грешки' ( опитах максимално да ги намяля, но текста не е минавал експертна проверка, така че най-вероятно ще има такива <img src="smileys/smile.gif" width="16" height="16" alt=":)" title=":)" class="bbcode_smiley" align="center" style="border: none;" /> ), 'буквален превод' (опитал съм максимално да избегна този ефект и да направя текста възможно най-лирически издържан, но на места или не съм могъл да го направя или не ми е дошло 'от вътре') и накрая на места може да си проличи, че е превеждан както казах парче по парче. Утре ако ми остане време ще го прочета отново и ако забележа някакви дефектчета ще ги fix-на. А ако вие забележите някакви дефектчета или неясноти, моля report-те ги тук в темата, за да мога да ги оправям навреме. Благодаря! В следващите преводи, ще внимавам още повече, така че да се получават възможно най-добре.</span>                                 </td>
+<script type="text/javascript" language="javascript">
+    function question_report(){
+        var quest = confirm("Сигурни ли сте, че искате да докладвате този коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_delete(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_hide(){
+        var quest = confirm("Сигурни ли сте, че искате да скриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+	function question(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете тази тема ?\n Заедно с темата ще изтриете и всички коментари в нея !!! \n Това действие неможе да бъде отменено !!! ");
+        if (quest){return true;} else{return false;}
+    }
+    function question_lock(){
+        var quest = confirm("Сигурни ли сте, че искате да ЗАКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_unlock(){
+        var quest = confirm("Сигурни ли сте, че искате да ОТКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+</script>
+                            </tr>
+                        </table>
+                        <div class="problem_divider">&nbsp;</div>
+                    </div>
+                                    <div class="forum_cat2">
+                        <table class="forum_table light_table">
+                            <tr>
+                                <td valign="top" width="85" style="padding: 7px 6px 7px 8px;">
+                                    <strong style="margin: 0 0 0 5px;"><a style="color: #b26400;" href="https://www.d3bg.org/showuser.php?userid=177">Biroslav</a></strong>
+                                    <div style="clear:both;"> </div>
+                                    <img class="forum_status_tag" src="../img/forum/offline_tag.png" />                                    <div class="avatar_frame_small" title="Регистриран на: 27/03/2012">&nbsp;</div>
+                                    <img class="avatar" style="width: 90px;margin: 0px 0 -95px -2px;top:-118px" src="../img/forum/avatars/avatar_t3_140e08.jpg?cc=1735860643"  width="90px" height="90px" class="comming_soon" alt="" />
+									                                    <p class="forum_user_desc"><div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                    Zakarum Zealot									</div>
+									<div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                                                        <span onmouseover="Tip('Коментари')" onmouseout="UnTip();"><i class="far fa-comment"></i> <strong>288</strong></span>
+									 | 
+									<span onmouseover="Tip('Репутация')" onmouseout="UnTip();"><i class="fas fa-thumbs-up"></i> <strong>2</strong><br /></span>
+                                    									</div>
+                                    									<a href="https://www.d3bg.org/showuser.php?userid=177&amp;btag=t" class="btag_icon"  onmouseover="Tip('Battle Tag: Biroslav#2784')" onmouseout="UnTip();">battle tag</a>                                    <a href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=177" class="pm_icon" onmouseover="Tip('Изпрати лично съобщение на Biroslav')" onmouseout="UnTip();">battle tag</a>
+																		<div style="text-align: center; padding-top: 40px;">
+																		</div>
+                                    </p>
+									                                </td>
+                                
+                                <td valign="top" width="681" class="forum_cat_content">
+<div style="width: 110px; text-align: right; margin-top: 7px; font-size: 14px; margin: 11px 75px 0 0px; float: right;">
+
+	<script type="text/javascript">
+	$(function() {
+		$(".sumr_20481").click(function (){
+			var type = 2;
+			var object = 20481;
+			var author = 177;
+			$(".sumr_loading_20481").show();
+			$(".sumr_20481").css({"opacity": "0"});
+			$.ajax({
+				url: "addvote.php",
+				type: "POST",
+				data: "type=" + type + "&object=" + object + "&author=" + author,
+				success: function (){
+					$(".sumr_loading_20481").hide();
+					var sumr_20481 = 0;
+					var newsumr_20481 = sumr_20481 + 1;
+					$(".sumr_20481").css({"-webkit-filter": "saturate(0)"});
+					$(".sumr_20481").css({"filter": "saturate(0)"});
+					$(".sumr_20481").css({"opacity": "1"});
+					
+				}, 
+			});
+			return false;
+		});
+	});
+	</script></div><div class="forum_post_options_reply"><div class="forum_post_vote_up_text"  id="sumresr_20481">0</div></div>                                    <h3><span style="color: #D6D1C4;"># 2:</span> <a name="reply20481" href="showpost0ba7.html?groupid=4&amp;catid=9&amp;postid=1516&amp;page=1#reply20481">Developer Journal: Crowd Control Changes</a></h3>
+                                            <div id="tooltip177" class="tooltip">
+        <div class="tooltip_body">
+            <div style="float: left;">
+            <div class="avatar_frame">&nbsp;</div>
+            <img class="avatar" src="../img/forum/avatars/avatar_t3_140e08.jpg?cc=1735860643" style="width: 112px; height: 112px;" class="comming_soon" alt="" />
+<h3 class="status_offline">Офлайн</h3>            </div>
+            <div class="user_tooltip_links">
+                <h3><a href="https://www.d3bg.org/showuser.php?userid=177">Biroslav</a></h3>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/showuser.php?userid=177">Профил</a><br/>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=177" >Лично съобщение</a><br/>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                Коментари: <strong style="color: #b26400;">288</strong>
+
+            </div>
+        </div>
+        <div class="tooltip_tail">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".username177").tooltip({events: {def: "click,mouseout"},tip: '#tooltip177', effect: 'slide', delay: 1000});
+        });
+    </script>
+    
+   <p><strong style="color: #D6D1C4;">Автор:</strong> <a class="username177" >Biroslav</a> на 17/09/2012 - 20:45ч. </p><div class="hr_forum">&nbsp;</div><div style="margin: 10px 0 0 0px;width:681px;" class="post_container" onmouseup="quick_quote('name=Biroslav date=17/09/2012 - 20:45ч.', event);">Идейно и много полезно.<br />
+Преводът ти е на доста високо ниво,радвам се че има хора,готови да жертват свободното си време за благото на целия БГ комюнити.                                </td>
+<script type="text/javascript" language="javascript">
+    function question_report(){
+        var quest = confirm("Сигурни ли сте, че искате да докладвате този коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_delete(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_hide(){
+        var quest = confirm("Сигурни ли сте, че искате да скриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+	function question(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете тази тема ?\n Заедно с темата ще изтриете и всички коментари в нея !!! \n Това действие неможе да бъде отменено !!! ");
+        if (quest){return true;} else{return false;}
+    }
+    function question_lock(){
+        var quest = confirm("Сигурни ли сте, че искате да ЗАКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_unlock(){
+        var quest = confirm("Сигурни ли сте, че искате да ОТКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+</script>
+                            </tr>
+                        </table>
+                        <div class="problem_divider">&nbsp;</div>
+                    </div>
+                                    <div class="forum_cat2">
+                        <table class="forum_table dark_table">
+                            <tr>
+                                <td valign="top" width="85" style="padding: 7px 6px 7px 8px;">
+                                    <strong style="margin: 0 0 0 5px;"><a style="color: #b26400;" href="https://www.d3bg.org/showuser.php?userid=846">Pernath</a></strong>
+                                    <div style="clear:both;"> </div>
+                                    <img class="forum_status_tag" src="../img/forum/offline_tag.png" />                                    <div class="avatar_frame_small" title="Регистриран на: 19/06/2012">&nbsp;</div>
+                                    <img class="avatar" style="width: 90px;margin: 0px 0 -95px -2px;top:-118px" src="../img/upload/avatars/8460e08.jpg?cc=1735860643"  width="90px" height="90px" class="comming_soon" alt="" />
+									                                    <p class="forum_user_desc"><div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                    Archangel									</div>
+									<div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                    <img src="../img/cross_bullet.png" onmouseover="Tip('Репутация: 421')" onmouseout="UnTip();" /><img src="../img/cross_bullet.png" onmouseover="Tip('Репутация: 421')" onmouseout="UnTip();" /><br />                                    <span onmouseover="Tip('Коментари')" onmouseout="UnTip();"><i class="far fa-comment"></i> <strong>849</strong></span>
+									 | 
+									<span onmouseover="Tip('Репутация')" onmouseout="UnTip();"><i class="fas fa-thumbs-up"></i> <strong>421</strong><br /></span>
+                                    									</div>
+                                    									<a class="btag_icon_invalid" onmouseover="Tip('Батъл тага липсва или е невалиден')" onmouseout="UnTip();">battle tag</a>                                    <a href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=846" class="pm_icon" onmouseover="Tip('Изпрати лично съобщение на Pernath')" onmouseout="UnTip();">battle tag</a>
+																		<div style="text-align: center; padding-top: 40px;">
+																		</div>
+                                    </p>
+									                                </td>
+                                
+                                <td valign="top" width="681" class="forum_cat_content">
+<div style="width: 110px; text-align: right; margin-top: 7px; font-size: 14px; margin: 11px 75px 0 0px; float: right;">
+
+	<script type="text/javascript">
+	$(function() {
+		$(".sumr_20486").click(function (){
+			var type = 2;
+			var object = 20486;
+			var author = 846;
+			$(".sumr_loading_20486").show();
+			$(".sumr_20486").css({"opacity": "0"});
+			$.ajax({
+				url: "addvote.php",
+				type: "POST",
+				data: "type=" + type + "&object=" + object + "&author=" + author,
+				success: function (){
+					$(".sumr_loading_20486").hide();
+					var sumr_20486 = 0;
+					var newsumr_20486 = sumr_20486 + 1;
+					$(".sumr_20486").css({"-webkit-filter": "saturate(0)"});
+					$(".sumr_20486").css({"filter": "saturate(0)"});
+					$(".sumr_20486").css({"opacity": "1"});
+					
+				}, 
+			});
+			return false;
+		});
+	});
+	</script></div><div class="forum_post_options_reply"><div class="forum_post_vote_up_text"  id="sumresr_20486">0</div></div>                                    <h3><span style="color: #D6D1C4;"># 3:</span> <a name="reply20486" href="showpost0ba7.html?groupid=4&amp;catid=9&amp;postid=1516&amp;page=1#reply20486">Developer Journal: Crowd Control Changes</a></h3>
+                                            <div id="tooltip846" class="tooltip">
+        <div class="tooltip_body">
+            <div style="float: left;">
+            <div class="avatar_frame">&nbsp;</div>
+            <img class="avatar" src="../img/upload/avatars/8460e08.jpg?cc=1735860643" style="width: 112px; height: 112px;" class="comming_soon" alt="" />
+<h3 class="status_offline">Офлайн</h3>            </div>
+            <div class="user_tooltip_links">
+                <h3><a href="https://www.d3bg.org/showuser.php?userid=846">Pernath</a></h3>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/showuser.php?userid=846">Профил</a><br/>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=846" >Лично съобщение</a><br/>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                Коментари: <strong style="color: #b26400;">849</strong>
+
+            </div>
+        </div>
+        <div class="tooltip_tail">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".username846").tooltip({events: {def: "click,mouseout"},tip: '#tooltip846', effect: 'slide', delay: 1000});
+        });
+    </script>
+    
+   <p><strong style="color: #D6D1C4;">Автор:</strong> <a class="username846" >Pernath</a> на 17/09/2012 - 21:43ч. </p><div class="hr_forum">&nbsp;</div><div style="margin: 10px 0 0 0px;width:681px;" class="post_container" onmouseup="quick_quote('name=Pernath date=17/09/2012 - 21:43ч.', event);">
+<div class="bbcode_quote">
+<div class="bbcode_quote_head"><strong>Biroslav</strong> написа на 17/09/2012-08:45:55PM:</div>
+<div class="bbcode_quote_body">Идейно и много полезно.<br />
+Преводът ти е на доста високо ниво,радвам се че има хора,готови да жертват свободното си време за благото на целия БГ комюнити.</div>
+</div>
+<br />
++1<br />
+Евала за старанието и ентусиазма.                                </td>
+<script type="text/javascript" language="javascript">
+    function question_report(){
+        var quest = confirm("Сигурни ли сте, че искате да докладвате този коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_delete(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_hide(){
+        var quest = confirm("Сигурни ли сте, че искате да скриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+	function question(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете тази тема ?\n Заедно с темата ще изтриете и всички коментари в нея !!! \n Това действие неможе да бъде отменено !!! ");
+        if (quest){return true;} else{return false;}
+    }
+    function question_lock(){
+        var quest = confirm("Сигурни ли сте, че искате да ЗАКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_unlock(){
+        var quest = confirm("Сигурни ли сте, че искате да ОТКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+</script>
+                            </tr>
+                        </table>
+                        <div class="problem_divider">&nbsp;</div>
+                    </div>
+                                    <div class="forum_cat2">
+                        <table class="forum_table light_table">
+                            <tr>
+                                <td valign="top" width="85" style="padding: 7px 6px 7px 8px;">
+                                    <strong style="margin: 0 0 0 5px;"><a style="color: #b26400;" href="https://www.d3bg.org/showuser.php?userid=386">steffaka</a></strong>
+                                    <div style="clear:both;"> </div>
+                                    <img class="forum_status_tag" src="../img/forum/offline_tag.png" />                                    <div class="avatar_frame_small" title="Регистриран на: 24/04/2012">&nbsp;</div>
+                                    <img class="avatar" style="width: 90px;margin: 0px 0 -95px -2px;top:-118px" src="../img/forum/avatars/avatar_t1_110e08.jpg?cc=1735860643"  width="90px" height="90px" class="comming_soon" alt="" />
+									                                    <p class="forum_user_desc"><div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                    Greater Mummy									</div>
+									<div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                                                        <span onmouseover="Tip('Коментари')" onmouseout="UnTip();"><i class="far fa-comment"></i> <strong>178</strong></span>
+									 | 
+									<span onmouseover="Tip('Репутация')" onmouseout="UnTip();"><i class="fas fa-thumbs-up"></i> <strong>8</strong><br /></span>
+                                    									</div>
+                                    <div style="margin: 2px 2px; text-align: center;">Diablo 3 Клан:<br /> <strong>&lt;Skull and Bones&gt;</strong></div>									<a href="https://www.d3bg.org/showuser.php?userid=386&amp;btag=t" class="btag_icon"  onmouseover="Tip('Battle Tag: steffaka#1898')" onmouseout="UnTip();">battle tag</a>                                    <a href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=386" class="pm_icon" onmouseover="Tip('Изпрати лично съобщение на steffaka')" onmouseout="UnTip();">battle tag</a>
+																		<div style="text-align: center; padding-top: 40px;">
+																		</div>
+                                    </p>
+									                                </td>
+                                
+                                <td valign="top" width="681" class="forum_cat_content">
+<div style="width: 110px; text-align: right; margin-top: 7px; font-size: 14px; margin: 11px 75px 0 0px; float: right;">
+
+	<script type="text/javascript">
+	$(function() {
+		$(".sumr_20493").click(function (){
+			var type = 2;
+			var object = 20493;
+			var author = 386;
+			$(".sumr_loading_20493").show();
+			$(".sumr_20493").css({"opacity": "0"});
+			$.ajax({
+				url: "addvote.php",
+				type: "POST",
+				data: "type=" + type + "&object=" + object + "&author=" + author,
+				success: function (){
+					$(".sumr_loading_20493").hide();
+					var sumr_20493 = 0;
+					var newsumr_20493 = sumr_20493 + 1;
+					$(".sumr_20493").css({"-webkit-filter": "saturate(0)"});
+					$(".sumr_20493").css({"filter": "saturate(0)"});
+					$(".sumr_20493").css({"opacity": "1"});
+					
+				}, 
+			});
+			return false;
+		});
+	});
+	</script></div><div class="forum_post_options_reply"><div class="forum_post_vote_up_text"  id="sumresr_20493">0</div></div>                                    <h3><span style="color: #D6D1C4;"># 4:</span> <a name="reply20493" href="showpost0ba7.html?groupid=4&amp;catid=9&amp;postid=1516&amp;page=1#reply20493">Developer Journal: Crowd Control Changes</a></h3>
+                                            <div id="tooltip386" class="tooltip">
+        <div class="tooltip_body">
+            <div style="float: left;">
+            <div class="avatar_frame">&nbsp;</div>
+            <img class="avatar" src="../img/forum/avatars/avatar_t1_110e08.jpg?cc=1735860643" style="width: 112px; height: 112px;" class="comming_soon" alt="" />
+<h3 class="status_offline">Офлайн</h3>            </div>
+            <div class="user_tooltip_links">
+                <h3><a href="https://www.d3bg.org/showuser.php?userid=386">steffaka</a></h3>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/showuser.php?userid=386">Профил</a><br/>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=386" >Лично съобщение</a><br/>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                Коментари: <strong style="color: #b26400;">178</strong>
+
+            </div>
+        </div>
+        <div class="tooltip_tail">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".username386").tooltip({events: {def: "click,mouseout"},tip: '#tooltip386', effect: 'slide', delay: 1000});
+        });
+    </script>
+    
+   <p><strong style="color: #D6D1C4;">Автор:</strong> <a class="username386" >steffaka</a> на 17/09/2012 - 23:38ч. </p><div class="hr_forum">&nbsp;</div><div style="margin: 10px 0 0 0px;width:681px;" class="post_container" onmouseup="quick_quote('name=steffaka date=17/09/2012 - 23:38ч.', event);">Благодарско !!!<br />
+                                </td>
+<script type="text/javascript" language="javascript">
+    function question_report(){
+        var quest = confirm("Сигурни ли сте, че искате да докладвате този коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_delete(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_hide(){
+        var quest = confirm("Сигурни ли сте, че искате да скриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+	function question(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете тази тема ?\n Заедно с темата ще изтриете и всички коментари в нея !!! \n Това действие неможе да бъде отменено !!! ");
+        if (quest){return true;} else{return false;}
+    }
+    function question_lock(){
+        var quest = confirm("Сигурни ли сте, че искате да ЗАКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_unlock(){
+        var quest = confirm("Сигурни ли сте, че искате да ОТКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+</script>
+                            </tr>
+                        </table>
+                        <div class="problem_divider">&nbsp;</div>
+                    </div>
+                                    <div class="forum_cat2">
+                        <table class="forum_table dark_table">
+                            <tr>
+                                <td valign="top" width="85" style="padding: 7px 6px 7px 8px;">
+                                    <strong style="margin: 0 0 0 5px;"><a style="color: #b26400;" href="https://www.d3bg.org/showuser.php?userid=826">ZAX_</a></strong>
+                                    <div style="clear:both;"> </div>
+                                    <img class="forum_status_tag" src="../img/forum/offline_tag.png" />                                    <div class="avatar_frame_small" title="Регистриран на: 16/06/2012">&nbsp;</div>
+                                    <img class="avatar" style="width: 90px;margin: 0px 0 -95px -2px;top:-118px" src="../img/forum/avatars/avatar_t1_10e08.jpg?cc=1735860643"  width="90px" height="90px" class="comming_soon" alt="" />
+									                                    <p class="forum_user_desc"><div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                    Megademon									</div>
+									<div style="margin: 0px -5px 2px -4px; text-align: center; padding: 0; width: 117px;">
+                                                                        <span onmouseover="Tip('Коментари')" onmouseout="UnTip();"><i class="far fa-comment"></i> <strong>350</strong></span>
+									 | 
+									<span onmouseover="Tip('Репутация')" onmouseout="UnTip();"><i class="fas fa-thumbs-up"></i> <strong>0</strong><br /></span>
+                                    									</div>
+                                    									<a class="btag_icon_invalid" onmouseover="Tip('Батъл тага липсва или е невалиден')" onmouseout="UnTip();">battle tag</a>                                    <a href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=826" class="pm_icon" onmouseover="Tip('Изпрати лично съобщение на ZAX_')" onmouseout="UnTip();">battle tag</a>
+																		<div style="text-align: center; padding-top: 40px;">
+																		</div>
+                                    </p>
+									                                </td>
+                                
+                                <td valign="top" width="681" class="forum_cat_content">
+<div style="width: 110px; text-align: right; margin-top: 7px; font-size: 14px; margin: 11px 75px 0 0px; float: right;">
+
+	<script type="text/javascript">
+	$(function() {
+		$(".sumr_21704").click(function (){
+			var type = 2;
+			var object = 21704;
+			var author = 826;
+			$(".sumr_loading_21704").show();
+			$(".sumr_21704").css({"opacity": "0"});
+			$.ajax({
+				url: "addvote.php",
+				type: "POST",
+				data: "type=" + type + "&object=" + object + "&author=" + author,
+				success: function (){
+					$(".sumr_loading_21704").hide();
+					var sumr_21704 = 0;
+					var newsumr_21704 = sumr_21704 + 1;
+					$(".sumr_21704").css({"-webkit-filter": "saturate(0)"});
+					$(".sumr_21704").css({"filter": "saturate(0)"});
+					$(".sumr_21704").css({"opacity": "1"});
+					
+				}, 
+			});
+			return false;
+		});
+	});
+	</script></div><div class="forum_post_options_reply"><div class="forum_post_vote_up_text"  id="sumresr_21704">0</div></div>                                    <h3><span style="color: #D6D1C4;"># 5:</span> <a name="reply21704" href="showpost0ba7.html?groupid=4&amp;catid=9&amp;postid=1516&amp;page=1#reply21704">Developer Journal: Crowd Control Changes</a></h3>
+                                            <div id="tooltip826" class="tooltip">
+        <div class="tooltip_body">
+            <div style="float: left;">
+            <div class="avatar_frame">&nbsp;</div>
+            <img class="avatar" src="../img/forum/avatars/avatar_t1_10e08.jpg?cc=1735860643" style="width: 112px; height: 112px;" class="comming_soon" alt="" />
+<h3 class="status_offline">Офлайн</h3>            </div>
+            <div class="user_tooltip_links">
+                <h3><a href="https://www.d3bg.org/showuser.php?userid=826">ZAX_</a></h3>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/showuser.php?userid=826">Профил</a><br/>
+                <a class="tooltip_bullet" href="https://www.d3bg.org/forum/pm.php?newmsg=1&amp;rid=826" >Лично съобщение</a><br/>
+                <div class="hr" style="width: 150px;">&nbsp;</div>
+                Коментари: <strong style="color: #b26400;">350</strong>
+
+            </div>
+        </div>
+        <div class="tooltip_tail">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".username826").tooltip({events: {def: "click,mouseout"},tip: '#tooltip826', effect: 'slide', delay: 1000});
+        });
+    </script>
+    
+   <p><strong style="color: #D6D1C4;">Автор:</strong> <a class="username826" >ZAX_</a> на 05/10/2012 - 04:40ч. </p><div class="hr_forum">&nbsp;</div><div style="margin: 10px 0 0 0px;width:681px;" class="post_container" onmouseup="quick_quote('name=ZAX_ date=05/10/2012 - 04:40ч.', event);">Благодарности и от мен <img src="smileys/smile.gif" width="16" height="16" alt=":)" title=":)" class="bbcode_smiley" align="center" style="border: none;" /><br />
+<br />
+С нетърпение очаквам всеки превод. Жалко когато не мога да се възползвам от дадена новина веднага, но все пак по-добре късно отколкото никога. От друга страна не мисля че е никак късно, щом е преди да е влязло в сила <img src="smileys/wink.gif" width="16" height="16" alt=";)" title=";)" class="bbcode_smiley" align="center" style="border: none;" /><br />
+<br />
+П.П. И до сега бяхме много яко прецакани, сега ще бъдем още по яко прецакани, обаче ни успокояват с факта, че видиш ли е могло да бъдем и още по прецакани. В заключение: тези които разработват диабло 3, са на светлинни години от хората създали диабло 2... И в крайна сметка отиваме неизбежно към копи/пейст от този бълвоч който представлява WoW(поне да копираха от D2, все пак играта се казва D3, не WoW3). Но какво да се прави, некадърни са и толкова си могат от една страна, а от друга така е в днешно време, тогава когато на преден план е печалбата, а не красотата и качеството. (лично мнение)                                </td>
+<script type="text/javascript" language="javascript">
+    function question_report(){
+        var quest = confirm("Сигурни ли сте, че искате да докладвате този коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_delete(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_hide(){
+        var quest = confirm("Сигурни ли сте, че искате да скриете този Коментар ?");
+        if (quest){return true;} else{return false;}
+    }
+	function question(){
+        var quest = confirm("Сигурни ли сте, че искате да изтриете тази тема ?\n Заедно с темата ще изтриете и всички коментари в нея !!! \n Това действие неможе да бъде отменено !!! ");
+        if (quest){return true;} else{return false;}
+    }
+    function question_lock(){
+        var quest = confirm("Сигурни ли сте, че искате да ЗАКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+    function question_unlock(){
+        var quest = confirm("Сигурни ли сте, че искате да ОТКЛЮЧИТЕ тази тема ?");
+        if (quest){return true;} else{return false;}
+    }
+</script>
+                            </tr>
+                        </table>
+                        <div class="problem_divider">&nbsp;</div>
+                    </div>
+                    </div>
+                <div style="clear:both;">&nbsp;</div>
+
+                <div class="forum_bottom_frame2">
+								
+				</div>
+                <div style="clear:both;">&nbsp;</div>
+                
+
+				<div style="clear:both;">&nbsp;</div><div style="clear:both;">&nbsp;</div>
+			                
+
+
+<div style="margin-bottom: -65px;margin-left: 735px;"><a class="comm_box add_comm_login modalInput forum_new_post" rel="#prompt" style="height: 14px;padding-top: 10px;border:0;">Отговори</a></div>
+			<div class="forum_info reply_zone" style="padding: 10px; margin-right: 10px;">
+			<div style="margin-left: 20px;">
+			<h3>Подобни теми</h3>
+			<div class="hr"></div>
+				<img src="../diablo3/fundamentals/imgs/bullet.gif" alt="bullet" align="center" />
+				<a href="showpost4b3d.html?groupid=4&amp;catid=9&amp;postid=1472&amp;page=1">Upcoming Changes in Patch 1.0.5 </a> 
+				 - От <a href="https://www.d3bg.org/showuser.php?userid=337" style="color: #b26400;; font-weight: bold;">Dex</a> на: 12/09/2012 - 10:24ч. 
+				<br />
+				<img src="../diablo3/fundamentals/imgs/bullet.gif" alt="bullet" align="center" />
+				<a href="showpost9917.html?groupid=4&amp;catid=9&amp;postid=1254&amp;page=1">Unofficial Patch 1.0.4 Changes ( via DiabloFans )</a> 
+				 - От <a href="https://www.d3bg.org/showuser.php?userid=337" style="color: #b26400;; font-weight: bold;">Dex</a> на: 20/08/2012 - 09:17ч. 
+				<br />
+				<img src="../diablo3/fundamentals/imgs/bullet.gif" alt="bullet" align="center" />
+				<a href="showpostcfcc.html?groupid=4&amp;catid=9&amp;postid=3314&amp;page=1">Datamined PTR 1.0.8 Class Changes</a> 
+				 - От <a href="https://www.d3bg.org/showuser.php?userid=156" style="color: #8234D1 !important;; font-weight: bold;">vaskobgn</a> на: 19/04/2013 - 01:43ч. 
+				<br />
+				<img src="../diablo3/fundamentals/imgs/bullet.gif" alt="bullet" align="center" />
+				<a href="showpost9b7b.html?groupid=4&amp;catid=9&amp;postid=4821&amp;page=1">Първи пач - 2.0.4 Datamined Class Changes</a> 
+				 - От <a href="https://www.d3bg.org/showuser.php?userid=1481" style="color: #b26400;; font-weight: bold;">olfilthy</a> на: 07/04/2014 - 09:39ч. 
+				<br />
+				<img src="../diablo3/fundamentals/imgs/bullet.gif" alt="bullet" align="center" />
+				<a href="showpost6194.html?groupid=4&amp;catid=9&amp;postid=3&amp;page=1">Диабло стана на 15 години!</a> 
+				 - От <a href="https://www.d3bg.org/showuser.php?userid=1" style="color: #0099ff !important;; font-weight: bold;">nzhul</a> на: 18/01/2012 - 13:27ч. 
+				<br /><div class="hr"></div></div></div><br />        <div id="forum_info">
+		
+			<p>
+			<h3>В момента 0 потребителя разглеждат темата</h3>
+			<div class="hr">&nbsp;</div>
+			</p><br />	
+				                    <h3>Кой е Онлайн?</h3>
+                    <div class="hr">&nbsp;</div>
+                    <p>В момента онлайн има <strong>1</strong> регистрирани потребители. Общо <strong>14</strong> онлайн за последните 24 часа.</p><p>Онлайн потребители: <a href="https://www.d3bg.org/showuser.php?userid=115" class="">zlos7ar</a> </p>
+						<br /><p>Най-активни днес: </p><br /><p>Рожденици днес: <a href="https://www.d3bg.org/showuser.php?userid=1360" class="">Alsoft</a> (50) </p><br /><div class="hr">&nbsp;</div>
+                    <p>Легенда: <strong><a class="forum_admin_color" href="https://www.d3bg.org/forum/users.php?type=1">Администратор</a></strong>, <strong><a class="forum_moderator_color" href="https://www.d3bg.org/forum/users.php?type=2">Модератор</a></strong>, <strong><a class="forum_vip_color" href="https://www.d3bg.org/forum/users.php?type=3">Почетен потребител</a></strong>, <strong><a href="https://www.d3bg.org/forum/users.php">Потребител</a></strong></p>
+                    <br />
+					<h3 style="margin: 15px 0 0 0px;">Статистика:</h3>
+                    <div class="hr">&nbsp;</div><p>Мнения: <strong>103428</strong> | Теми: <strong>6569</strong> | Потребители: <strong>6393</strong> | Най-новият ни потребител е: <strong><a href="https://www.d3bg.org/showuser.php?userid=6961">aggregate</a></strong></p>
+                    <div style="clear:both;">&nbsp;</div>								
+						</div>
+			<div id="adm_bottom_border"></div>
+		</div>        
+</div>
+        <div id="footer">
+            <div style="width: 700px; margin: 0 auto;">© 2012 - 2025. Всички права запазени. <a href="#">D3BG.org</a><br />
+			<a href="../privacy.html">Поверителност</a> | <a href="../terms.html">Условия за ползване</a>
+						<div style="clear:both;">&nbsp;</div>
+            <p>Diablo<sup>®</sup> и Blizzard Entertainment<sup>®</sup> са търговски марки или регистрирани<br/> търговски марки на Blizzard Entertainment</p></div>
+        </div>
+</div> <!-- turbo container -->
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9510429-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+<script src="https://wow.zamimg.com/js/tooltips.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8fbe89d76dadd0c6',t:'MTczNTg2MDY0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../cdn-cgi/challenge-platform/h/b/scripts/jsd/787bc399e22f/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+<!-- Mirrored from www.d3bg.org/forum/showpost.php?groupid=4&catid=9&postid=1516&page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 11:42:46 GMT -->
+</html>
+

@@ -1,0 +1,16 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.d3bg.org	TRUE	/	FALSE	1999999999	PHPSESSID	8951c53f547318a6b069008f104b99f4
+www.d3bg.org	TRUE	/	FALSE	1999999999	__cl	CdXDfRvkA2aiyr1
+www.d3bg.org	TRUE	/	FALSE	1999999999	feature	1
+www.d3bg.org	TRUE	/	FALSE	1999999999	new_feature_discord	1
+www.d3bg.org	TRUE	/	FALSE	1999999999	feature_necro	1
+.facebook.com	TRUE	/	FALSE	1999999999	sb	seh2Zyzccv_ugChuY8QU3ESH
+www.d3bg.org	TRUE	/	FALSE	1999999999	cross-site-cookie	name
+www.d3bg.org	TRUE	/	FALSE	1999999999	SameSite	None
+.youtube.com	TRUE	/	FALSE	1999999999	YSC	s9zEiAkpOnA
+.youtube.com	TRUE	/	FALSE	1999999999	__Secure-YEC	CgthYmE2UTBucGJMVSiX69u7BjIiCgJCRxIcEhgSFhMLFBUWFwwYGRobHB0eHw4PIBAREiEgMQ%3D%3D
+.youtube.com	TRUE	/	FALSE	1999999999	VISITOR_PRIVACY_METADATA	CgJCRxIcEhgSFhMLFBUWFwwYGRobHB0eHw4PIBAREiEgMQ%3D%3D
+www.youtube.com	TRUE	/	FALSE	1999999999	SameSite	none
+.youtube.com	TRUE	/	FALSE	1999999999	SameSite	none
+

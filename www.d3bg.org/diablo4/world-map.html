@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.d3bg.org/diablo4/world-map.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 10:20:46 GMT -->
+<head>
+	<title>Карта на света</title>
+	<script type="text/javascript" src="../js/jquery.1.5.1.min.js"></script> 
+	<link rel="stylesheet" href="d4_page.css">
+</head>
+
+<body>
+
+	<img src="img/world-map.jpg" id="world-map" usemap="#world-map" width="900px" height="670px">
+	<img src="img/world-map-highlight-scosglen.jpg" id="highlight-scosglen" style="position: absolute; margin: -574px 0px 0px 549px; pointer-events: none; display: none;">
+	<img src="img/world-map-highlight-dry-steppes.jpg" id="highlight-dry-steppes" style="position: absolute; margin: -507px 0px 0px 475px; pointer-events: none; display: none;">
+	<img src="img/world-map-highlight-fractured-peaks.jpg" id="highlight-fractured-peaks" style="position: absolute; margin: -478px 0px 0px 615px; pointer-events: none; display: none;">
+	<img src="img/world-map-highlight-hawezar.jpg" id="highlight-hawezar" style="position: absolute; margin: -390px 0px 0px 568px; pointer-events: none; display: none;">
+	<img src="img/world-map-highlight-kehjistan.jpg" id="highlight-kehjistan" style="position: absolute; margin: -415px 0px 0px 452px; pointer-events: none; display: none;">
+	
+	<div style="width: 900px; text-align: center; position: absolute; top: 0; margin-top: 50px;">
+		<span id="highlight-scosglen-banner" style="font-family: 'OldFenris-Regular'; text-transform: uppercase; font-size: 2em; display: none; color: rgb(23, 22, 18); text-shadow: 0px 2px 3px #543a2d;">Scosglen</span>
+		<span id="highlight-fractured-peaks-banner" style="font-family:'OldFenris-Regular'; text-transform: uppercase; font-size: 2em; display: none; color: rgb(23, 22, 18); text-shadow: 0px 2px 3px #543a2d;">Fractured Peaks</span>
+		<span id="highlight-kehjistan-banner" style="font-family:'OldFenris-Regular'; text-transform: uppercase; font-size: 2em; display: none; color: rgb(23, 22, 18); text-shadow: 0px 2px 3px #543a2d;">Kehjistan</span>
+		<span id="highlight-hawezar-banner" style="font-family:'OldFenris-Regular'; text-transform: uppercase; font-size: 2em; display: none; color: rgb(23, 22, 18); text-shadow: 0px 2px 3px #543a2d;">Hawezar</span>
+		<span id="highlight-dry-steppes-banner" style="font-family:'OldFenris-Regular'; text-transform: uppercase; font-size: 2em; display: none; color: rgb(23, 22, 18); text-shadow: 0px 2px 3px #543a2d;">Dry Steppes</span>
+
+	</div>
+
+	<map name="world-map">
+		<area alt="" title="" target="_parent" href="zones/scosglen.html" coords="607,120,571,164,612,198,711,218,712,153,638,116" shape="poly" id="map-scosglen">
+		<area alt="" title="" target="_parent" href="zones/dry-steppes.html" coords="578,171,533,187,484,246,485,274,613,300,657,208,612,199" shape="poly" id="map-dry-steppes">
+		<area alt="" title="" target="_parent" href="zones/fractured-peaks.html" coords="658,209,712,220,716,208,736,218,748,254,697,296,615,300" shape="poly" id="map-fractured-peaks">
+		<area alt="" title="" target="_parent" href="../diablo3/acts/kehjistan.html" coords="487,276,613,302,567,356,494,395,469,384,454,334,461,308" shape="poly" id="map-kehjistan">
+		<area alt="" title="" target="_parent" href="zones/hawezar.html" coords="574,356,617,394,673,420,719,401,736,352,734,313,704,298,615,303" shape="poly" id="map-hawezar">
+	</map>	
+
+
+	<script type="text/javascript">
+		$('#map-scosglen').mouseover(function() {
+			$('#highlight-scosglen').show();
+			$('#highlight-scosglen-banner').show();
+		}).mouseout(function(){
+			$('#highlight-scosglen').hide();
+			$('#highlight-scosglen-banner').hide();
+		});	
+		$('#map-dry-steppes').mouseover(function() {
+			$('#highlight-dry-steppes').show();
+			$('#highlight-dry-steppes-banner').show();
+		}).mouseout(function(){
+			$('#highlight-dry-steppes').hide();
+			$('#highlight-dry-steppes-banner').hide();
+		});
+		$('#map-fractured-peaks').mouseover(function() {
+			$('#highlight-fractured-peaks').show();
+			$('#highlight-fractured-peaks-banner').show();
+		}).mouseout(function(){
+			$('#highlight-fractured-peaks').hide();
+			$('#highlight-fractured-peaks-banner').hide();
+		});
+		$('#map-hawezar').mouseover(function() {
+			$('#highlight-hawezar').show();
+			$('#highlight-hawezar-banner').show();
+		}).mouseout(function(){
+			$('#highlight-hawezar').hide();
+			$('#highlight-hawezar-banner').hide();
+		});
+		$('#map-kehjistan').mouseover(function() {
+			$('#highlight-kehjistan').show();
+			$('#highlight-kehjistan-banner').show();
+		}).mouseout(function(){
+			$('#highlight-kehjistan').hide();
+			$('#highlight-kehjistan-banner').hide();
+		});
+	</script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8fbd1985683ad0f7',t:'MTczNTg0NTU1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../cdn-cgi/challenge-platform/h/b/scripts/jsd/787bc399e22f/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+<!-- Mirrored from www.d3bg.org/diablo4/world-map.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 10:20:46 GMT -->
+</html>
